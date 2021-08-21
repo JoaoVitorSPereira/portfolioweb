@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
+import i18next from 'i18next';
+
+import { languages } from '../../i18n/config';
+
 import React, { useState } from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import { GiUsaFlag, GiBrazilFlag } from 'react-icons/gi';
-
-import en from '../../../public/locales/en';
-import pt from '../../../public/locales/pt';
 
 import {
   Container,
@@ -18,10 +20,10 @@ import {
   LanguageButtons,
 } from './styles';
 
-const Header = () => {
+const Header = lang => {
   const router = useRouter();
-  const { locale } = router;
-  const t = locale === 'en' ? en : pt;
+  // const { locale } = router;
+  // const path = pathname.replace(/\[lang\]/i, lang);
 
   return (
     <Container>
@@ -35,36 +37,40 @@ const Header = () => {
       <Div2>
         <li>
           <Link href="#projects">
-            <NavLink>{t.projects}</NavLink>
+            <NavLink>{i18next.t('projects')}</NavLink>
           </Link>
         </li>
         <li>
           <Link href="#tech">
-            <NavLink>{t.skills}</NavLink>
+            <NavLink>{i18next.t('skills')}</NavLink>
           </Link>
         </li>
         <li>
           <Link href="#about">
-            <NavLink>{t.about}</NavLink>
+            <NavLink>{i18next.t('about')}</NavLink>
           </Link>
         </li>
       </Div2>
       <LanguageDiv>
+        {/* <Link href={pathname} as={path} prefetch={false}> */}
         <LanguageButtons
           onClick={() => {
-            router.push(router.pathname, router.asPath, { locale: 'en' });
+            router.push('/en');
           }}
         >
           <GiUsaFlag size="30px" />
         </LanguageButtons>
+        {/* </Link> */}
+        {/* <Link href={pathname} as={path} prefetch={false}> */}
         <LanguageButtons
           style={{ marginLeft: 20 }}
           onClick={() => {
-            router.push(router.pathname, router.asPath, { locale: 'pt' });
+            router.push('/pt');
           }}
         >
           <GiBrazilFlag size="30px" />
         </LanguageButtons>
+        {/* </Link> */}
       </LanguageDiv>
       <Div3>
         <SocialIcons

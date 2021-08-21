@@ -1,4 +1,6 @@
 import React from 'react';
+import i18next from 'i18next';
+
 import { useRouter } from 'next/router';
 
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
@@ -16,13 +18,9 @@ import {
   SocialIconsContainer,
 } from './styles';
 
-import en from '../../../public/locales/en';
-import pt from '../../../public/locales/pt';
-
 const Footer = () => {
   const router = useRouter();
-  const { locale } = router;
-  const t = locale === 'en' ? en : pt;
+
   return (
     <FooterWrapper>
       <LinkList>
@@ -39,7 +37,7 @@ const Footer = () => {
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>{t.developed}</Slogan>
+          <Slogan>{i18next.t('developed')}</Slogan>
         </CompanyContainer>
         <SocialContainer>
           <SocialIcons

@@ -1,27 +1,19 @@
-import Acomplishments from '../components/Acomplishments';
-import Welcome from '../components/Welcome';
-import Projects from '../components/Projects';
-import Skills from '../components/Skills';
-import Timeline from '../components/TimeLine';
-import { Layout } from '../layout';
-import { Section } from '../styles/GlobalComponents';
-import GraphicModel from '../components/GraphicBackgroundModel';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-// import './i18n';
+import i18next from 'i18next';
 
-const Home = () => {
-  return (
-    <Layout>
-      <Section grid>
-        <Welcome />
-        <GraphicModel />
-      </Section>
-      <Projects />
-      <Skills />
-      <Timeline />
-      <Acomplishments />
-    </Layout>
-  );
-};
+import { getSortedLangsData } from '../lib/lang';
 
-export default Home;
+export default function Home({ allLangsData }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const { pathname } = router;
+    if (pathname == '/') {
+      router.push('/' + i18next.language.substring(0, 2));
+    }
+  });
+
+  return null;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import i18next from 'i18next';
 
 import {
   BlogCard,
@@ -21,18 +22,14 @@ import {
 } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
-import en from '../../../public/locales/en';
-import pt from '../../../public/locales/pt';
-
 const Projects = () => {
   const router = useRouter();
-  const { locale } = router;
-  const t = locale === 'en' ? en : pt;
+  const { asPath } = router;
 
   return (
     <Section nopadding id="projects">
       <SectionDivider />
-      <SectionTitle main>{t.projectsTitle}</SectionTitle>
+      <SectionTitle main>{i18next.t('projectsTitle')}</SectionTitle>
       <GridContainer>
         {projects.map((p, i) => {
           return (
@@ -43,7 +40,7 @@ const Projects = () => {
                 <Hr />
               </TitleContent>
               <CardInfo className="card-info">
-                {locale === 'en' ? p.description : p.descriptionPT}
+                {asPath === '/en' ? p.description : p.descriptionPT}
               </CardInfo>
               <div>
                 <TitleContent>Stack</TitleContent>
@@ -55,12 +52,14 @@ const Projects = () => {
               </div>
               <UtilityList>
                 {p.visit === '' ? null : (
-                  <ExternalLinks href={p.visit}>{t.moreButton}</ExternalLinks>
+                  <ExternalLinks href={p.visit}>
+                    {i18next.t('moreButton')}
+                  </ExternalLinks>
                 )}
 
                 {p.source === '' ? null : (
                   <ExternalLinks href={p.source}>
-                    {t.sourceButton}
+                    {i18next.t('sourceButton')}
                   </ExternalLinks>
                 )}
               </UtilityList>

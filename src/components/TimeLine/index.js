@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
-
+import i18next from 'i18next';
 import {
   CarouselButton,
   CarouselButtonDot,
@@ -19,9 +19,6 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 
-import en from '../../../public/locales/en';
-import pt from '../../../public/locales/pt';
-
 import { TimeLineData } from '../../constants/constants';
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
@@ -30,8 +27,7 @@ const Timeline = () => {
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef = useRef();
   const router = useRouter();
-  const { locale } = router;
-  const t = locale === 'en' ? en : pt;
+  const { asPath } = router;
 
   const scroll = (window, left) => {
     return window.scrollTo({ left, behavior: 'smooth' });
@@ -71,8 +67,8 @@ const Timeline = () => {
 
   return (
     <Section id="about">
-      <SectionTitle>{t.aboutTitle}</SectionTitle>
-      <SectionText>{t.aboutText}</SectionText>
+      <SectionTitle>{i18next.t('aboutTitle')}</SectionTitle>
+      <SectionText>{i18next.t('aboutText')}</SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
           {TimeLineData.map((item, index) => (
@@ -122,7 +118,7 @@ const Timeline = () => {
                   </CarouselItemImg>
                 </CarouselItemTitle>
                 <CarouselItemText>
-                  {locale === 'en' ? item.text : item.textPT}
+                  {asPath === '/en' ? item.text : item.textPT}
                 </CarouselItemText>
               </CarouselItem>
             </CarouselMobileScrollNode>

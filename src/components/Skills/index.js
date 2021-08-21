@@ -1,6 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { DiReact } from 'react-icons/di';
+import i18next from 'i18next';
+
 import {
   Section,
   SectionDivider,
@@ -15,18 +17,15 @@ import {
   ListTitle,
 } from './styles';
 
-import en from '../../../public/locales/en';
-import pt from '../../../public/locales/pt';
-
 const Skills = () => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === 'en' ? en : pt;
+
   return (
     <Section id="tech">
       <SectionDivider divider />
-      <SectionTitle>{t.skillsTitle}</SectionTitle>
-      <SectionText>{t.skillsDescription}</SectionText>
+      <SectionTitle>{i18next.t('skillsTitle')}</SectionTitle>
+      <SectionText>{i18next.t('skillsDescription')}</SectionText>
       <List>
         <ListItem>
           <picture>
@@ -35,7 +34,7 @@ const Skills = () => {
           <ListContainer>
             <ListTitle>Front-End</ListTitle>
             <ListParagraph>
-              {t.skillsExperience} <br />
+              {i18next.t('skillsExperience')} <br />
               HTML, CSS, JavaScript, React.js, NextJS, ThreeJS, Typescript,
               Styled-Components.
             </ListParagraph>
@@ -48,7 +47,7 @@ const Skills = () => {
           <ListContainer>
             <ListTitle>Mobile</ListTitle>
             <ListParagraph>
-              {t.skillsExperience} <br />
+              {i18next.t('skillsExperience')} <br />
               React-Native.
             </ListParagraph>
           </ListContainer>
