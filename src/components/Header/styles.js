@@ -130,7 +130,7 @@ export const SocialIcons = styled.a`
   }
 `;
 
-export const LanguageButtons = styled.button`
+export const LanguageButtons = styled.a`
   align-items: center;
   display: flex;
   justify-content: center;
