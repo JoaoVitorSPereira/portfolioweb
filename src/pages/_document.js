@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link href="/font/fontstyle.css" rel="stylesheet" />
+          <link href="font/fontstyle.css" rel="stylesheet" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
