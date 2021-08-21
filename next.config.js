@@ -1,10 +1,10 @@
-const withImages = require('next-images');
+const withFonts = require('next-fonts');
 
 // module.exports = withImages();
 
 // PARA DEPLOY
 
-module.exports = withImages({
+module.exports = withFonts({
   basePath: '/portfolioweb',
   assetPrefix: '/portfolioweb',
 });
