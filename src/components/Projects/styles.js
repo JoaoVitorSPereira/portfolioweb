@@ -100,8 +100,22 @@ export const TagList = styled.ul`
   display: flex;
   justify-content: space-around;
   padding: 2rem;
+  align-items: center;
+
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 export const Tag = styled.li`
   color: #d8bfbf;
   font-size: 1.5rem;
+
+  @media (max-width: 320px) {
+    margin-top: 5px;
+  }
+
+  @media (max-width: 375px) {
+    margin-left: 5px;
+  }
 `;
