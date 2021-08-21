@@ -70,6 +70,7 @@ export const BoxText = styled.p`
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.02em;
+  margin-bottom: 5px;
   color: rgba(255, 255, 255, 0.75);
 
   @media ${props => props.theme.breakpoints.md} {

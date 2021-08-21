@@ -16,14 +16,6 @@ import { Section } from '../../styles/GlobalComponents';
 import GraphicModel from '../../components/GraphicBackgroundModel';
 
 export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    const { pathname } = router;
-    if (pathname == '/') {
-      router.push('/' + i18next.language.substring(0, 2));
-    }
-  });
   return (
     <Layout>
       <Section grid>

@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: ${props => props.theme.fonts.main};
+    src: url('../public/font/MADE_Mirage_Medium.otf') format('otf');
     font-size: 1.6rem;
     background: ${props => props.theme.colors.background1};
     color: ${props => props.theme.colors.primary1};
