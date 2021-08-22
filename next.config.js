@@ -5,6 +5,6 @@ const withFonts = require('next-fonts');
 // PARA DEPLOY
 
 module.exports = withFonts({
-  basePath: '/',
-  assetPrefix: '/',
+  basePath: '/en',
+  assetPrefix: '/en',
 });
