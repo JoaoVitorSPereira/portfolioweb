@@ -11,11 +11,18 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
-    scroll-behavior: smooth;
-
+    scroll-behavior: smooth
   }
+
+  /* @font-face {
+    font-family: 'MADEMirage-Medium';
+  src: url('../../public/font/MADE_Mirage_Medium.otf') format('otf')
+  } */
   body {
-    font-family: 'MADEMirage';
+    font-family: 'MADEMirage', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
     font-size: 1.6rem;
     background: ${props => props.theme.colors.background1};
     color: ${props => props.theme.colors.primary1};
@@ -23,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
 
   }
   h1,h2,h3,h4,h5,h6,button {
-    font-family: ${props => props.theme.fonts.title};
+    font-family: ${props => props.theme.fonts.title}, sans-serif;
   }
   a {
     text-decoration: none;

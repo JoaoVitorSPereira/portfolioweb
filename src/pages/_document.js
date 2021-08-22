@@ -32,7 +32,13 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="preload" as="font" href="font/MADE_Mirage_Black.otf" />
+          <link
+            rel="preload"
+            as="font"
+            type="font/otf"
+            crossOrigin=""
+            href="font/MADE_Mirage_Black.otf"
+          />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>

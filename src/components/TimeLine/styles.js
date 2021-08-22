@@ -64,6 +64,7 @@ export const CarouselItem = styled.div`
 `;
 
 export const CarouselItemTitle = styled.h4`
+  font-family: 'MADEMirage', sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
@@ -76,7 +77,7 @@ export const CarouselItemTitle = styled.h4`
     rgba(255, 255, 255, 0.66) 30.15%
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   margin-bottom: 8px;
 
   @media ${props => props.theme.breakpoints.md} {
