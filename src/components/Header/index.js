@@ -63,7 +63,7 @@ const Header = lang => {
         {/* </Link> */}
         {/* <Link href={pathname} as={path} prefetch={false}> */}
         <LanguageButtons
-          style={{ marginLeft: 20 }}
+          style={{ marginLeft: 18 }}
           onClick={() => {
             router.push('/pt');
           }}
