@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
 const GlobalStyles = createGlobalStyle`
-  ${normalize};
+  /* ${normalize}; */
 
   * {
     box-sizing: border-box;
@@ -15,13 +15,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* @font-face {
-    font-family: 'MADEMirage-Medium';
-  src: url('../../public/font/MADE_Mirage_Medium.otf') format('otf')
+    font-family: 'MADEMirage';
+    src: url('/fonts/MADE_Mirage_Regular.otf') format('otf');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
   } */
   body {
-    font-family: 'MADEMirage', sans-serif;
-    font-weight: normal;
+    font-family: 'MADEMirage' ;
     font-style: normal;
+    font-weight: 500;
     font-display: swap;
     font-size: 1.6rem;
     background: ${props => props.theme.colors.background1};

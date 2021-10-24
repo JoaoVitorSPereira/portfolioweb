@@ -13,8 +13,8 @@ import { Box, Boxes, BoxNum, BoxText } from './styles';
 const data = [
   {
     number: 1000,
-    text: 'Hours spent in RPGs. (most of them are Final Fantasy 🐉⚔️🛡)',
-    textPT: 'Horas gastas em RPGs. (a maioria deles é Final Fantasy 🐉⚔️🛡)',
+    text: 'Hours spent in RPGs. (most of them are Final Fantasy 🐉⚔️)',
+    textPT: 'Horas gastas em RPGs. (a maioria deles é Final Fantasy 🐉⚔️)',
   },
   {
     number: 500,

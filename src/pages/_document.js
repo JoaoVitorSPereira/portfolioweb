@@ -36,8 +36,8 @@ export default class MyDocument extends Document {
             rel="preload"
             as="font"
             type="font/otf"
+            href="/fonts/MADE_Mirage_Black.otf"
             crossOrigin=""
-            href="font/MADE_Mirage_Black.otf"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
