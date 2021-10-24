@@ -6,7 +6,7 @@ export const projects = [
     descriptionPT:
       'App desenvolvido sob o nome da empresa Usabit utilizando o framework React-Native Javascript.',
     image: './../images/1.png',
-    tags: ['React-Native', 'Styled-Components', 'Redux'],
+    tags: ['React-Native', 'Styled-Components', 'Redux', 'Context-API'],
     source: '',
     visit: '',
     id: 0,
