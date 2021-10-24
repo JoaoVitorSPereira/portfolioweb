@@ -5,7 +5,7 @@ export const projects = [
       'App developed under the name of Usabit company using React-Native Javascript framework.',
     descriptionPT:
       'App desenvolvido sob o nome da empresa Usabit utilizando o framework React-Native Javascript.',
-    image: '/images/1.png',
+    image: './../images/1.png',
     tags: ['React-Native', 'Styled-Components', 'Redux'],
     source: '',
     visit: '',
@@ -17,7 +17,7 @@ export const projects = [
       'Three.JS with Typescript course from the Udemy platform. Three.JS is a Javascript library used to create 3D animated computer graphics in a web browser using WebGL',
     descriptionPT:
       'Curso de Three.JS com Typescript da plataforma Udemy. Three.JS é uma biblioteca Javascript usada para criar gráficos de computador animados em 3D em um navegador da Web usando WebGL.',
-    image: '/images/2.png',
+    image: './../images/2.png',
     tags: ['Typescript', 'JavaScript'],
     source: 'https://github.com/JoaoVitorSPereira/STUDIES/tree/main/threejs',
     visit: 'https://threejs.org/docs/',
@@ -29,7 +29,7 @@ export const projects = [
       'Full-stack bootcamp provided by Rocketseat. Using Javascript, Typescript with React as a web development library, React-Native as a app development library and Node.JS for back-end development.',
     descriptionPT:
       'Bootcamp full-stack fornecido pela Rocketseat. Usando Javascript, Typescript com React como biblioteca de desenvolvimento web, React-Native como biblioteca de desenvolvimento de aplicativos e Node.JS para desenvolvimento back-end.',
-    image: '/images/3.png',
+    image: './../images/3.png',
     tags: ['React', 'React-Native', 'Node.JS', 'Javascript', 'Typescript'],
     source: '',
     visit: '',
@@ -41,7 +41,7 @@ export const projects = [
       'Front-end web development course from Alura Cursos using Javascript with ReactJS library to create web aplications.',
     descriptionPT:
       'Curso front-end de desenvolvimento web pela Alura Cursos utilizando Javascript com a biblioteca ReactJS para criação de aplicações web.',
-    image: '/images/4.png',
+    image: './../images/4.png',
     tags: ['React', 'Javascript'],
     source: 'https://github.com/JoaoVitorSPereira/STUDIES/tree/main/alura',
     visit: 'https://www.alura.com.br/',
