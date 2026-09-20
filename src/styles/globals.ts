@@ -11,13 +11,14 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
-    scroll-behavior: smooth
+    height: 100%;
+    overflow: hidden;
   }
 
   body {
     font-weight: 500;
     font-size: 1.6rem;
-    background: #0c1220;
+    background: #1f6fff;
     color: ${({ theme }) => theme.colors.primary1};
     cursor: default;
   }
