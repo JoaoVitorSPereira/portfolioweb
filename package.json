@@ -3,7 +3,9 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
+    "predev": "tsx scripts/generate-agent-files.ts",
     "dev": "next dev",
+    "prebuild": "tsx scripts/generate-agent-files.ts",
     "build": "next build",
     "start": "next start"
   },
@@ -21,6 +23,7 @@
     "@types/node": "26.6.2",
     "@types/react": "19.3.0",
     "prettier": "^3.9.6",
+    "tsx": "^4.23.13",
     "typescript": "7.0.2"
   }
 }

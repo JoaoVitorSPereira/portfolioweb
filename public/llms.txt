@@ -1,0 +1,19 @@
+# João Pereira
+
+> Senior Mobile Developer. Over 6 years shipping production mobile apps for fintech, social and logistics platforms. I care about clean architecture, smooth UI and getting things through App Store review without losing my mind.
+
+## Machine-readable
+- [Resume, JSON Resume (EN)](https://joaovitorspereira.github.io/portfolioweb/resume.json): resume, skills and work history
+- [Resume, JSON Resume (PT)](https://joaovitorspereira.github.io/portfolioweb/resume.pt.json)
+- [Full profile as text](https://joaovitorspereira.github.io/portfolioweb/llms-full.txt): everything on the site in one file
+- [Agent guide](https://joaovitorspereira.github.io/portfolioweb/agents.md): WebMCP tools and how to call them
+- [CV (PDF)](https://joaovitorspereira.github.io/portfolioweb/cvfolder/JoaoPereira_CV.pdf)
+
+## Pages
+- [Portfolio (EN)](https://joaovitorspereira.github.io/portfolioweb/en)
+- [Portfolio (PT)](https://joaovitorspereira.github.io/portfolioweb/pt)
+
+## Contact
+- Email: joaovitorspereira@gmail.com
+- GitHub: https://github.com/JoaoVitorSPereira
+- LinkedIn: https://www.linkedin.com/in/joaovitorspereira/

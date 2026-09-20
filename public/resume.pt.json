@@ -1,0 +1,174 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "João Pereira",
+    "label": "Desenvolvedor Mobile Sênior",
+    "email": "joaovitorspereira@gmail.com",
+    "url": "https://joaovitorspereira.github.io/portfolioweb/pt",
+    "summary": "Mais de 6 anos entregando apps mobile em produção para fintech, redes sociais e logística. Gosto de arquitetura limpa, UI fluida e sobreviver à revisão da App Store sem perder a cabeça.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "url": "https://github.com/JoaoVitorSPereira"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/joaovitorspereira/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Fintech & Banco Digital",
+      "position": "Desenvolvedor Mobile Sênior",
+      "summary": "Atuação como Senior Mobile Engineer, responsável pela direção técnica de uma aplicação mobile fintech desenvolvida do zero. Responsável pela arquitetura da aplicação de ponta a ponta e pelas principais decisões técnicas, com foco em escalabilidade, manutenibilidade, segurança e qualidade de código a longo prazo.\n\nLiderança do fluxo de desenvolvimento no dia a dia, incluindo a divisão de requisitos técnicos, delegação de tarefas para desenvolvedores juniores, revisão de código e definição de padrões e boas práticas de engenharia adotados pelo projeto. Definição e manutenção da estratégia de versionamento do projeto, incluindo fluxo de trabalho com Git, estratégia de branches e estrutura de versionamento, garantindo um processo de desenvolvimento consistente e controlado.\n\nDesenvolvimento de fluxos seguros de autenticação e identidade utilizando armazenamento criptografado, App Attest, biometria e recursos de segurança das plataformas. Desenvolvimento e manutenção de integrações com APIs REST em colaboração direta com os desenvolvedores de backend, garantindo uma comunicação confiável entre a aplicação mobile e os serviços backend.\n\nResponsável pelo ciclo de publicação da aplicação em iOS e Android, incluindo criação de builds de produção, publicação na App Store e Google Play e gerenciamento de atualizações OTA. Atuação na investigação e resolução de problemas em produção, além de melhorias contínuas de estabilidade, performance e manutenibilidade da aplicação.\n\nTambém atuei no desenvolvimento de uma aplicação POS integrada a um SDK nativo de terceiros. Desenvolvi módulos nativos em Kotlin e uma ponte nativa (React Native Native Bridge) para disponibilizar as funcionalidades do SDK para a camada JavaScript, mantendo a aplicação centralizada em React Native enquanto as responsabilidades específicas do dispositivo e do SDK permanecem encapsuladas na camada nativa.",
+      "keywords": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Zustand",
+        "React Query",
+        "REST APIs",
+        "Expo Router",
+        "Native SDK Integration",
+        "Kotlin",
+        "Native Bridge",
+        "POS",
+        "Architecture",
+        "Code Review",
+        "Git Branching Strategy",
+        "App Attest",
+        "Biometrics",
+        "EAS Update",
+        "Apple App Store",
+        "Google Play"
+      ]
+    },
+    {
+      "name": "Rede Social",
+      "position": "Engenheiro de Software Mobile",
+      "summary": "Engenheiro de Software Mobile em uma plataforma de rede social de larga escala usada por milhares de pessoas, construída em torno de comunidades, feed em tempo real e interações ricas em posts. Desenvolvi e mantive funcionalidades em produção com foco em UI escalável, performance e engajamento.\n\nConstruí o lado cliente das principais funcionalidades sociais: comunidades, publicação no feed, conteúdo incorporado (embed) nos posts, curtidas e descurtidas em tempo real e comentários em cada post. Utilizei GraphQL com Apollo Client para consultar e alterar dados e manter feed, reações e comentários atualizados ao vivo.\n\nTrabalhei com um backend baseado em controle de acesso por papéis (RBAC), adaptando a interface e as ações disponíveis para cada usuário de acordo com seu papel e suas permissões.\n\nMigrei uma aplicação React Native existente do React Native CLI para o Expo, melhorando a manutenibilidade e simplificando o fluxo de desenvolvimento e deploy. Construí funcionalidades de gamificação e engajamento, componentes de UI reutilizáveis e performáticos e experiências multiplataforma com React Native Web, colaborando com designers, engenheiros de backend e QA para entregar e manter funcionalidades em produção.",
+      "keywords": [
+        "React Native",
+        "Expo",
+        "React Native Web",
+        "TypeScript",
+        "GraphQL",
+        "Apollo Client",
+        "React Query",
+        "Styled Components",
+        "REST APIs"
+      ]
+    },
+    {
+      "name": "Delivery & Rastreamento em Mapa",
+      "position": "Engenheiro de Software Mobile",
+      "summary": "Desenvolvi funcionalidades mobile focadas em gestão de entregas, rastreamento em tempo real e recursos baseados em localização. Implementei a integração com o Google Maps, visualização de rotas e fluxos de entrega, além de recursos de rastreamento de entregas.\n\nIntegrei o Firebase Cloud Messaging para push notifications e consumi APIs REST colaborando com desenvolvedores de backend. Também participei da publicação, manutenção e suporte em produção do aplicativo.",
+      "keywords": [
+        "React Native",
+        "Firebase",
+        "Firebase Cloud Messaging",
+        "Google Maps",
+        "Redux",
+        "REST APIs"
+      ]
+    },
+    {
+      "name": "Live Streaming",
+      "position": "Engenheiro de Software Mobile",
+      "summary": "Desenvolvi componentes React Native reutilizáveis e funcionalidades mobile para experiências de live streaming. Foquei em construir interfaces de fácil manutenção, melhorar a usabilidade e otimizar a performance do aplicativo.\n\nTrabalhei de perto com os times de produto e design para transformar requisitos em funcionalidades mobile prontas para produção.",
+      "keywords": [
+        "React Native",
+        "TypeScript",
+        "JavaScript",
+        "Reusable Components",
+        "Mobile UI",
+        "Performance Optimization"
+      ]
+    },
+    {
+      "name": "Software House",
+      "position": "Desenvolvedor Frontend & Mobile",
+      "summary": "Desenvolvi aplicações para web e mobile usando React e React Native, construindo componentes de UI reutilizáveis e integrando as aplicações com APIs REST, contribuindo para funcionalidades prontas para produção e para a manutenção das aplicações.\n\nTrabalhei junto a desenvolvedores seniores em todo o processo de desenvolvimento, contribuindo com a implementação de funcionalidades, manutenção de código, releases e melhorias em aplicações existentes.",
+      "keywords": [
+        "React",
+        "React Native",
+        "JavaScript",
+        "TypeScript",
+        "REST APIs",
+        "Reusable UI Components",
+        "Git"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Mobile",
+      "keywords": [
+        "React Native",
+        "Expo",
+        "Expo Router",
+        "React Navigation",
+        "Zustand",
+        "Redux",
+        "Native SDK Integration",
+        "Biometrics",
+        "App Attest",
+        "Secure Storage",
+        "EAS Build/Update"
+      ]
+    },
+    {
+      "name": "Front-End",
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Three.js",
+        "Styled-Components",
+        "React Query"
+      ]
+    },
+    {
+      "name": "Tooling & Practices",
+      "keywords": [
+        "REST APIs",
+        "GraphQL",
+        "Firebase",
+        "Git",
+        "App Store Connect",
+        "Google Play Console",
+        "Figma",
+        "Postman"
+      ]
+    }
+  ],
+  "meta": {
+    "language": "pt",
+    "yearsOfExperience": 6,
+    "cv": "https://joaovitorspereira.github.io/portfolioweb/cvfolder/JoaoPereira_CV.pdf",
+    "career": [
+      {
+        "year": 2018,
+        "text": "Comecei a mexer com tecnologia e me apaixonei por front end com JavaScript."
+      },
+      {
+        "year": 2020,
+        "text": "Primeiro emprego como desenvolvedor, construindo aplicações React e React Native."
+      },
+      {
+        "year": 2022,
+        "text": "Entreguei apps de logística e live streaming, e depois entrei em uma plataforma social usada por milhares, liderando a migração para Expo."
+      },
+      {
+        "year": 2024,
+        "text": "Entrei no fintech como Mobile Software Engineer, trabalhando com banking seguro e integrações de SDKs nativos."
+      },
+      {
+        "year": 2026,
+        "text": "Desenvolvedor Mobile Sênior com mais de 6 anos entregando apps em produção em fintech, social e logística."
+      }
+    ]
+  }
+}
