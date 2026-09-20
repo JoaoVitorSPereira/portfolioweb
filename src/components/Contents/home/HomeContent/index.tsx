@@ -21,6 +21,7 @@ import {
   HomeLayer,
   LangButton,
   LangSwitch,
+  PageTitle,
   Root,
   ScreenBar,
   ScreenBody,
@@ -47,6 +48,7 @@ export default function HomeContent() {
   return (
     <Phone>
       <Root>
+        <PageTitle>{i18next.t('seoTitle')}</PageTitle>
         <HomeLayer $pushed={current !== null} inert={current !== null}>
           <Bar>
             <Avatar>JP</Avatar>
@@ -75,7 +77,7 @@ export default function HomeContent() {
                 <BackButton aria-label="Back" onClick={() => go(null)}>
                   <IoChevronBack size="2.2rem" />
                 </BackButton>
-                <h1>{i18next.t(key)}</h1>
+                <h2>{i18next.t(key)}</h2>
               </ScreenBar>
               <ScreenBody>
                 <Screen />

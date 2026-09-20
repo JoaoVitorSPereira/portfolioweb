@@ -4,21 +4,35 @@ import type { GetStaticPropsContext, GetStaticPropsResult } from 'next';
 import HomeContent from '@/components/Contents/home/HomeContent';
 import { SITE_URL, getJsonLd } from '@/lib/agent';
 import { getAllLanguageSlugs, getLanguage } from '@/lib/lang';
+import { getSeo } from '@/lib/seo';
 
 interface Props {
   language: string;
 }
 
 export default function HomeScreen({ language }: Props) {
+  const seo = getSeo(language);
+
   return (
     <>
       <Head>
-        <title>João Pereira — Senior Mobile Developer</title>
-        <meta
-          name="description"
-          content="Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social and logistics."
-        />
-        <link rel="canonical" href={`${SITE_URL}/${language}`} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta property="og:type" content="profile" />
+        <meta property="og:site_name" content="João Pereira" />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:url" content={seo.url} />
+        <meta property="og:image" content={seo.image} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content={seo.locale} />
+        <meta property="og:locale:alternate" content={seo.alternateLocale} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content={seo.description} />
+        <meta name="twitter:image" content={seo.image} />
+        <link rel="canonical" href={seo.url} />
         <link rel="alternate" hrefLang="en" href={`${SITE_URL}/en`} />
         <link rel="alternate" hrefLang="pt" href={`${SITE_URL}/pt`} />
         <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/en`} />

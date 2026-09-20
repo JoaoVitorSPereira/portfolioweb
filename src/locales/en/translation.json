@@ -10,10 +10,9 @@
   "moreButton": "More",
   "sourceButton": "Source",
   "skillsTitle": "Skills and Technologies.",
-  "skillsDescription": "Six years deep in React Native and TypeScript, building and shipping production apps across fintech, social networking, logistics and live streaming. Comfortable owning a feature from architecture to App Store release.",
+  "skillsDescription": "Six years of experience with React Native and TypeScript, building and shipping production applications across fintech, social networking, logistics, and live streaming. Experienced in owning features end to end, from architecture and implementation to production releases on the App Store and Google Play.",
   "skillsExperience": "Experience with",
   "aboutTitle": "About me.",
-  "aboutText": "I started messing with technology in 2018 and got hooked on JavaScript front end. Since then I moved into React Native full-time, and now work as a senior mobile engineer building secure, production-grade apps used by thousands of people.",
   "homeHint": "Tap Portfolio to open",
   "hello": "Hello, João",
   "expLabel": "Experience",
@@ -33,5 +32,14 @@
   "stack": "Stack",
   "aboutTab": "About me",
   "exploreTitle": "Explore",
-  "keyTech": "Key Technologies"
+  "keyTech": "Key Technologies",
+  "aboutCard1": "Over 6 years building and shipping production mobile applications with React Native and TypeScript, working across fintech, social networking, logistics, and live streaming.",
+  "aboutCard2": "I specialize in taking mobile features from architecture to production — designing maintainable solutions, integrating APIs and native SDKs, handling platform-specific requirements, and shipping reliable releases to the App Store and Google Play.",
+  "aboutCard3": "I care about clean architecture, thoughtful technical decisions, performance, security, and a smooth user experience. I also enjoy the engineering side of the work: reviewing code, defining standards, breaking down complex problems, and helping other developers grow.",
+  "aboutText1": "My experience goes beyond implementation. I contribute to architecture and technical decisions, review code, delegate work, establish engineering standards, and help build codebases that are easier to maintain and scale.",
+  "aboutText2": "I started in JavaScript and web development in 2018 before moving into React Native and making mobile engineering my focus. Since then, I've worked on applications ranging from financial and identity flows to logistics, social platforms, and native device integrations.",
+  "aboutText3": "I like solving complex mobile problems, keeping the architecture clean, and shipping software that actually works in production.",
+  "builtTitle": "What I've Built Along the Way",
+  "seoTitle": "João Pereira — Senior Mobile Developer",
+  "seoDescription": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming."
 }

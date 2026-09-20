@@ -1,4 +1,9 @@
-import { experiences, skillGroups, TimeLineData } from '@/constants/constants';
+import {
+  experiences,
+  highlights,
+  skillGroups,
+  timeline,
+} from '@/constants/constants';
 import en from '@/locales/en/translation.json';
 import pt from '@/locales/pt/translation.json';
 
@@ -65,9 +70,14 @@ export function getResume(language?: string) {
       language: l,
       yearsOfExperience: parseInt(copy[l].expValue, 10),
       cv: links.cv,
-      career: TimeLineData.map(t => ({
+      career: timeline.map(t => ({
         year: t.year,
-        text: l === 'pt' ? t.textPT : t.text,
+        title: l === 'pt' ? t.titlePT : t.title,
+        description: l === 'pt' ? t.paragraphsPT : t.paragraphs,
+      })),
+      highlights: highlights.map(h => ({
+        title: l === 'pt' ? h.titlePT : h.title,
+        text: l === 'pt' ? h.textPT : h.text,
       })),
     },
   };

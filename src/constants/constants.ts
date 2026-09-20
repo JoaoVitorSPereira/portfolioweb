@@ -9,8 +9,17 @@ interface Experience {
   tags: string[];
 }
 
-interface TimeLineItem {
+interface TimelineEntry {
   year: number;
+  title: string;
+  titlePT: string;
+  paragraphs: string[];
+  paragraphsPT: string[];
+}
+
+interface Highlight {
+  title: string;
+  titlePT: string;
   text: string;
   textPT: string;
 }
@@ -160,36 +169,119 @@ export const experiences: Experience[] = [
   },
 ];
 
-export const TimeLineData: TimeLineItem[] = [
+export const timeline: TimelineEntry[] = [
   {
-    year: 2018,
-    text: 'I started messing with technology and got hooked on JavaScript front end.',
-    textPT:
-      'Comecei a mexer com tecnologia e me apaixonei por front end com JavaScript.',
-  },
-  {
-    year: 2020,
-    text: 'First developer job, building React and React Native applications.',
-    textPT:
-      'Primeiro emprego como desenvolvedor, construindo aplicações React e React Native.',
-  },
-  {
-    year: 2022,
-    text: 'Shipped logistics and live-streaming apps, then joined a social platform used by thousands, leading its migration to Expo.',
-    textPT:
-      'Entreguei apps de logística e live streaming, e depois entrei em uma plataforma social usada por milhares, liderando a migração para Expo.',
+    year: 2026,
+    title: 'Senior Mobile Developer',
+    titlePT: 'Desenvolvedor Mobile Sênior',
+    paragraphs: [
+      '6+ years building and shipping production applications with React Native and TypeScript, across fintech, social networking, logistics, and live streaming.',
+      'Today, my focus goes beyond feature development. I work across mobile architecture, technical decisions, native integrations, security, performance, API integration, and production releases for iOS and Android.',
+      'I also take ownership of engineering practices within the team — breaking down technical work, delegating tasks, reviewing code, defining development standards, and helping other developers deliver production-ready features.',
+    ],
+    paragraphsPT: [
+      'Mais de 6 anos desenvolvendo e publicando aplicações em produção com React Native e TypeScript, em fintech, redes sociais, logística e live streaming.',
+      'Hoje, meu foco vai além do desenvolvimento de funcionalidades. Atuo em arquitetura mobile, decisões técnicas, integrações nativas, segurança, performance, integração de APIs e releases de produção para iOS e Android.',
+      'Também assumo a responsabilidade pelas práticas de engenharia dentro do time — dividindo o trabalho técnico, delegando tarefas, revisando código, definindo padrões de desenvolvimento e ajudando outros desenvolvedores a entregar funcionalidades prontas para produção.',
+    ],
   },
   {
     year: 2024,
-    text: 'Moved into fintech as a Mobile Software Engineer, working on secure banking and native SDK integrations.',
-    textPT:
-      'Entrei no fintech como Mobile Software Engineer, trabalhando com banking seguro e integrações de SDKs nativos.',
+    title: 'Fintech & Native Mobile',
+    titlePT: 'Fintech & Mobile Nativo',
+    paragraphs: [
+      'Moved into fintech development, working on secure banking applications and complex mobile integrations.',
+      'Worked with authentication, biometrics, liveness detection, identity validation, secure storage, App Attest, and third-party native SDKs.',
+      'Expanded my experience beyond React Native by developing Kotlin native modules and React Native bridges, allowing native SDKs and device-specific functionality to be exposed to the JavaScript layer.',
+      'Also took ownership of the mobile release lifecycle, including production builds, App Store and Google Play releases, and over-the-air updates.',
+    ],
+    paragraphsPT: [
+      'Migrei para o desenvolvimento em fintech, atuando em aplicações bancárias seguras e integrações mobile complexas.',
+      'Trabalhei com autenticação, biometria, detecção de vivacidade (liveness), validação de identidade, armazenamento seguro, App Attest e SDKs nativos de terceiros.',
+      'Ampliei minha experiência além do React Native desenvolvendo módulos nativos em Kotlin e bridges para o React Native, permitindo expor SDKs nativos e funcionalidades específicas do dispositivo para a camada JavaScript.',
+      'Também assumi a responsabilidade pelo ciclo de releases mobile, incluindo builds de produção, publicações na App Store e no Google Play e atualizações over-the-air.',
+    ],
   },
   {
-    year: 2026,
-    text: 'Senior Mobile Developer with 6+ years shipping production apps across fintech, social and logistics.',
+    year: 2022,
+    title: 'Scaling Mobile Across Different Products',
+    titlePT: 'Escalando Mobile em Diferentes Produtos',
+    paragraphs: [
+      'Worked across logistics, live streaming, and social networking applications, solving different types of mobile and product challenges.',
+      'Built features involving delivery tracking, Google Maps, route visualization, push notifications, reusable components, live-streaming functionality, gamification, and user engagement.',
+      'Later joined a large social platform and helped migrate the application from React Native CLI to Expo, improving the development and deployment workflow while continuing to build and optimize production features.',
+    ],
+    paragraphsPT: [
+      'Atuei em aplicações de logística, live streaming e redes sociais, resolvendo diferentes tipos de desafios de mobile e de produto.',
+      'Construí funcionalidades envolvendo rastreamento de entregas, Google Maps, visualização de rotas, push notifications, componentes reutilizáveis, funcionalidades de live streaming, gamificação e engajamento de usuários.',
+      'Depois, entrei em uma grande plataforma social e ajudei a migrar a aplicação do React Native CLI para o Expo, melhorando o fluxo de desenvolvimento e deploy enquanto continuava construindo e otimizando funcionalidades em produção.',
+    ],
+  },
+  {
+    year: 2020,
+    title: 'React → React Native',
+    titlePT: 'React → React Native',
+    paragraphs: [
+      'Started my professional development career working with React and React Native, building production applications and reusable UI components.',
+      'Worked with REST APIs, application maintenance, feature development, and production releases, while learning how to work effectively within an established engineering team.',
+      'This was where I moved from learning the technology to understanding how software is actually built, maintained, reviewed, and shipped.',
+    ],
+    paragraphsPT: [
+      'Comecei minha carreira profissional em desenvolvimento trabalhando com React e React Native, construindo aplicações em produção e componentes de UI reutilizáveis.',
+      'Trabalhei com APIs REST, manutenção de aplicações, desenvolvimento de funcionalidades e releases de produção, enquanto aprendia a trabalhar bem dentro de um time de engenharia consolidado.',
+      'Foi aqui que passei de aprender a tecnologia para entender como o software é realmente construído, mantido, revisado e entregue.',
+    ],
+  },
+  {
+    year: 2018,
+    title: 'Where It Started',
+    titlePT: 'Onde Tudo Começou',
+    paragraphs: [
+      'Started exploring technology and quickly got hooked on JavaScript and front-end development.',
+      'What began with an interest in building things for the web eventually led me to React, React Native, and a career focused on building mobile applications used by real people.',
+    ],
+    paragraphsPT: [
+      'Comecei a explorar tecnologia e rapidamente me apaixonei por JavaScript e desenvolvimento front-end.',
+      'O que começou com o interesse em construir coisas para a web acabou me levando ao React, ao React Native e a uma carreira focada em construir aplicações mobile usadas por pessoas reais.',
+    ],
+  },
+];
+
+export const highlights: Highlight[] = [
+  {
+    title: 'Mobile',
+    titlePT: 'Mobile',
+    text: 'Production React Native applications for iOS and Android, including fintech, social, logistics, and live-streaming products.',
     textPT:
-      'Desenvolvedor Mobile Sênior com mais de 6 anos entregando apps em produção em fintech, social e logística.',
+      'Aplicações React Native em produção para iOS e Android, incluindo produtos de fintech, social, logística e live streaming.',
+  },
+  {
+    title: 'Security & Identity',
+    titlePT: 'Segurança & Identidade',
+    text: 'Authentication, biometrics, liveness detection, identity validation, secure storage, App Attest, and native security capabilities.',
+    textPT:
+      'Autenticação, biometria, detecção de vivacidade (liveness), validação de identidade, armazenamento seguro, App Attest e recursos nativos de segurança.',
+  },
+  {
+    title: 'Native Integrations',
+    titlePT: 'Integrações Nativas',
+    text: 'Third-party SDK integrations, Kotlin native modules, React Native bridges, and platform-specific functionality.',
+    textPT:
+      'Integrações com SDKs de terceiros, módulos nativos em Kotlin, bridges para o React Native e funcionalidades específicas de cada plataforma.',
+  },
+  {
+    title: 'Architecture & Engineering',
+    titlePT: 'Arquitetura & Engenharia',
+    text: 'Mobile architecture, reusable components, state management, API integration, performance optimization, code reviews, Git workflows, and development standards.',
+    textPT:
+      'Arquitetura mobile, componentes reutilizáveis, gerenciamento de estado, integração de APIs, otimização de performance, code reviews, fluxos de Git e padrões de desenvolvimento.',
+  },
+  {
+    title: 'Production & Delivery',
+    titlePT: 'Produção & Entrega',
+    text: 'EAS Build, EAS Update, App Store releases, Google Play releases, production debugging, and continuous application improvements.',
+    textPT:
+      'EAS Build, EAS Update, releases na App Store e no Google Play, debugging em produção e melhorias contínuas nas aplicações.',
   },
 ];
 
@@ -201,13 +293,22 @@ export const skillGroups = [
       'Expo',
       'Expo Router',
       'React Navigation',
+      'TypeScript',
       'Zustand',
       'Redux',
+      'Context API',
+      'React Query',
+      'React Native Web',
       'Native SDK Integration',
+      'Native Modules',
+      'Kotlin',
       'Biometrics',
       'App Attest',
       'Secure Storage',
-      'EAS Build/Update',
+      'Deep Linking',
+      'Push Notifications',
+      'EAS Build',
+      'EAS Update',
     ],
   },
   {
@@ -217,22 +318,30 @@ export const skillGroups = [
       'JavaScript',
       'React',
       'Next.js',
-      'Three.js',
-      'Styled-Components',
+      'React Native Web',
+      'Styled Components',
       'React Query',
+      'GraphQL',
+      'Three.js',
+      'REST APIs',
     ],
   },
   {
     title: 'Tooling & Practices',
     tags: [
+      'Git',
+      'GitHub',
+      'Firebase',
       'REST APIs',
       'GraphQL',
-      'Firebase',
-      'Git',
-      'App Store Connect',
-      'Google Play Console',
-      'Figma',
       'Postman',
+      'Android Studio',
+      'Xcode',
+      'Apple App Store Connect',
+      'Google Play Console',
+      'EAS',
+      'CI/CD',
+      'Figma',
     ],
   },
 ];

@@ -1,11 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import i18next from 'i18next';
-import {
-  IoBatteryFull,
-  IoBriefcase,
-  IoCellular,
-  IoWifi,
-} from 'react-icons/io5';
+import { IoBatteryFull, IoCellular, IoWifi } from 'react-icons/io5';
 
 import { AppOpenContext } from './context';
 import {
@@ -109,9 +104,7 @@ export default function Phone({ children }: Props) {
 
           <HomeScreen $open={open} $ready={booted} inert={open}>
             <AppIcon ref={iconRef} onClick={openApp}>
-              <IconTile>
-                <IoBriefcase size="3.4rem" />
-              </IconTile>
+              <IconTile>JP</IconTile>
               Portfolio
             </AppIcon>
             <Hint>{i18next.t('homeHint')}</Hint>

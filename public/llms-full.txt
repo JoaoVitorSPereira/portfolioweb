@@ -3,9 +3,9 @@
 Over 6 years shipping production mobile apps for fintech, social and logistics platforms. I care about clean architecture, smooth UI and getting things through App Store review without losing my mind.
 
 ## Skills
-- Mobile: React Native, Expo, Expo Router, React Navigation, Zustand, Redux, Native SDK Integration, Biometrics, App Attest, Secure Storage, EAS Build/Update
-- Front-End: TypeScript, JavaScript, React, Next.js, Three.js, Styled-Components, React Query
-- Tooling & Practices: REST APIs, GraphQL, Firebase, Git, App Store Connect, Google Play Console, Figma, Postman
+- Mobile: React Native, Expo, Expo Router, React Navigation, TypeScript, Zustand, Redux, Context API, React Query, React Native Web, Native SDK Integration, Native Modules, Kotlin, Biometrics, App Attest, Secure Storage, Deep Linking, Push Notifications, EAS Build, EAS Update
+- Front-End: TypeScript, JavaScript, React, Next.js, React Native Web, Styled Components, React Query, GraphQL, Three.js, REST APIs
+- Tooling & Practices: Git, GitHub, Firebase, REST APIs, GraphQL, Postman, Android Studio, Xcode, Apple App Store Connect, Google Play Console, EAS, CI/CD, Figma
 
 ## Work
 ### Fintech & Digital Banking, Senior Mobile Developer
@@ -59,11 +59,52 @@ Worked alongside senior developers throughout the development process, contribut
 Technologies: React, React Native, JavaScript, TypeScript, REST APIs, Reusable UI Components, Git
 
 ## Career
-- 2018: I started messing with technology and got hooked on JavaScript front end.
-- 2020: First developer job, building React and React Native applications.
-- 2022: Shipped logistics and live-streaming apps, then joined a social platform used by thousands, leading its migration to Expo.
-- 2024: Moved into fintech as a Mobile Software Engineer, working on secure banking and native SDK integrations.
-- 2026: Senior Mobile Developer with 6+ years shipping production apps across fintech, social and logistics.
+### 2026, Senior Mobile Developer
+
+6+ years building and shipping production applications with React Native and TypeScript, across fintech, social networking, logistics, and live streaming.
+
+Today, my focus goes beyond feature development. I work across mobile architecture, technical decisions, native integrations, security, performance, API integration, and production releases for iOS and Android.
+
+I also take ownership of engineering practices within the team — breaking down technical work, delegating tasks, reviewing code, defining development standards, and helping other developers deliver production-ready features.
+
+### 2024, Fintech & Native Mobile
+
+Moved into fintech development, working on secure banking applications and complex mobile integrations.
+
+Worked with authentication, biometrics, liveness detection, identity validation, secure storage, App Attest, and third-party native SDKs.
+
+Expanded my experience beyond React Native by developing Kotlin native modules and React Native bridges, allowing native SDKs and device-specific functionality to be exposed to the JavaScript layer.
+
+Also took ownership of the mobile release lifecycle, including production builds, App Store and Google Play releases, and over-the-air updates.
+
+### 2022, Scaling Mobile Across Different Products
+
+Worked across logistics, live streaming, and social networking applications, solving different types of mobile and product challenges.
+
+Built features involving delivery tracking, Google Maps, route visualization, push notifications, reusable components, live-streaming functionality, gamification, and user engagement.
+
+Later joined a large social platform and helped migrate the application from React Native CLI to Expo, improving the development and deployment workflow while continuing to build and optimize production features.
+
+### 2020, React → React Native
+
+Started my professional development career working with React and React Native, building production applications and reusable UI components.
+
+Worked with REST APIs, application maintenance, feature development, and production releases, while learning how to work effectively within an established engineering team.
+
+This was where I moved from learning the technology to understanding how software is actually built, maintained, reviewed, and shipped.
+
+### 2018, Where It Started
+
+Started exploring technology and quickly got hooked on JavaScript and front-end development.
+
+What began with an interest in building things for the web eventually led me to React, React Native, and a career focused on building mobile applications used by real people.
+
+## What I've built along the way
+- Mobile: Production React Native applications for iOS and Android, including fintech, social, logistics, and live-streaming products.
+- Security & Identity: Authentication, biometrics, liveness detection, identity validation, secure storage, App Attest, and native security capabilities.
+- Native Integrations: Third-party SDK integrations, Kotlin native modules, React Native bridges, and platform-specific functionality.
+- Architecture & Engineering: Mobile architecture, reusable components, state management, API integration, performance optimization, code reviews, Git workflows, and development standards.
+- Production & Delivery: EAS Build, EAS Update, App Store releases, Google Play releases, production debugging, and continuous application improvements.
 
 ## Contact
 - Email: joaovitorspereira@gmail.com

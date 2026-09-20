@@ -34,8 +34,11 @@ export default class MyDocument extends Document {
     }
   }
   render() {
+    const pageProps = this.props.__NEXT_DATA__.props?.pageProps as
+      { language?: string } | undefined;
+
     return (
-      <Html>
+      <Html lang={pageProps?.language ?? 'en'}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
         </Head>

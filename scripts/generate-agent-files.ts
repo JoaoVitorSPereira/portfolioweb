@@ -61,7 +61,12 @@ Technologies: ${w.keywords.join(', ')}`,
   .join('\n\n')}
 
 ## Career
-${resume.meta.career.map(c => `- ${c.year}: ${c.text}`).join('\n')}
+${resume.meta.career
+  .map(c => `### ${c.year}, ${c.title}\n\n${c.description.join('\n\n')}`)
+  .join('\n\n')}
+
+## What I've built along the way
+${resume.meta.highlights.map(h => `- ${h.title}: ${h.text}`).join('\n')}
 
 ## Contact
 - Email: ${links.email}

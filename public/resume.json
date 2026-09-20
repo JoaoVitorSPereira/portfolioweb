@@ -109,13 +109,22 @@
         "Expo",
         "Expo Router",
         "React Navigation",
+        "TypeScript",
         "Zustand",
         "Redux",
+        "Context API",
+        "React Query",
+        "React Native Web",
         "Native SDK Integration",
+        "Native Modules",
+        "Kotlin",
         "Biometrics",
         "App Attest",
         "Secure Storage",
-        "EAS Build/Update"
+        "Deep Linking",
+        "Push Notifications",
+        "EAS Build",
+        "EAS Update"
       ]
     },
     {
@@ -125,22 +134,30 @@
         "JavaScript",
         "React",
         "Next.js",
+        "React Native Web",
+        "Styled Components",
+        "React Query",
+        "GraphQL",
         "Three.js",
-        "Styled-Components",
-        "React Query"
+        "REST APIs"
       ]
     },
     {
       "name": "Tooling & Practices",
       "keywords": [
+        "Git",
+        "GitHub",
+        "Firebase",
         "REST APIs",
         "GraphQL",
-        "Firebase",
-        "Git",
-        "App Store Connect",
+        "Postman",
+        "Android Studio",
+        "Xcode",
+        "Apple App Store Connect",
         "Google Play Console",
-        "Figma",
-        "Postman"
+        "EAS",
+        "CI/CD",
+        "Figma"
       ]
     }
   ],
@@ -150,24 +167,71 @@
     "cv": "https://joaovitorspereira.github.io/portfolioweb/cvfolder/JoaoPereira_CV.pdf",
     "career": [
       {
-        "year": 2018,
-        "text": "I started messing with technology and got hooked on JavaScript front end."
-      },
-      {
-        "year": 2020,
-        "text": "First developer job, building React and React Native applications."
-      },
-      {
-        "year": 2022,
-        "text": "Shipped logistics and live-streaming apps, then joined a social platform used by thousands, leading its migration to Expo."
+        "year": 2026,
+        "title": "Senior Mobile Developer",
+        "description": [
+          "6+ years building and shipping production applications with React Native and TypeScript, across fintech, social networking, logistics, and live streaming.",
+          "Today, my focus goes beyond feature development. I work across mobile architecture, technical decisions, native integrations, security, performance, API integration, and production releases for iOS and Android.",
+          "I also take ownership of engineering practices within the team — breaking down technical work, delegating tasks, reviewing code, defining development standards, and helping other developers deliver production-ready features."
+        ]
       },
       {
         "year": 2024,
-        "text": "Moved into fintech as a Mobile Software Engineer, working on secure banking and native SDK integrations."
+        "title": "Fintech & Native Mobile",
+        "description": [
+          "Moved into fintech development, working on secure banking applications and complex mobile integrations.",
+          "Worked with authentication, biometrics, liveness detection, identity validation, secure storage, App Attest, and third-party native SDKs.",
+          "Expanded my experience beyond React Native by developing Kotlin native modules and React Native bridges, allowing native SDKs and device-specific functionality to be exposed to the JavaScript layer.",
+          "Also took ownership of the mobile release lifecycle, including production builds, App Store and Google Play releases, and over-the-air updates."
+        ]
       },
       {
-        "year": 2026,
-        "text": "Senior Mobile Developer with 6+ years shipping production apps across fintech, social and logistics."
+        "year": 2022,
+        "title": "Scaling Mobile Across Different Products",
+        "description": [
+          "Worked across logistics, live streaming, and social networking applications, solving different types of mobile and product challenges.",
+          "Built features involving delivery tracking, Google Maps, route visualization, push notifications, reusable components, live-streaming functionality, gamification, and user engagement.",
+          "Later joined a large social platform and helped migrate the application from React Native CLI to Expo, improving the development and deployment workflow while continuing to build and optimize production features."
+        ]
+      },
+      {
+        "year": 2020,
+        "title": "React → React Native",
+        "description": [
+          "Started my professional development career working with React and React Native, building production applications and reusable UI components.",
+          "Worked with REST APIs, application maintenance, feature development, and production releases, while learning how to work effectively within an established engineering team.",
+          "This was where I moved from learning the technology to understanding how software is actually built, maintained, reviewed, and shipped."
+        ]
+      },
+      {
+        "year": 2018,
+        "title": "Where It Started",
+        "description": [
+          "Started exploring technology and quickly got hooked on JavaScript and front-end development.",
+          "What began with an interest in building things for the web eventually led me to React, React Native, and a career focused on building mobile applications used by real people."
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Mobile",
+        "text": "Production React Native applications for iOS and Android, including fintech, social, logistics, and live-streaming products."
+      },
+      {
+        "title": "Security & Identity",
+        "text": "Authentication, biometrics, liveness detection, identity validation, secure storage, App Attest, and native security capabilities."
+      },
+      {
+        "title": "Native Integrations",
+        "text": "Third-party SDK integrations, Kotlin native modules, React Native bridges, and platform-specific functionality."
+      },
+      {
+        "title": "Architecture & Engineering",
+        "text": "Mobile architecture, reusable components, state management, API integration, performance optimization, code reviews, Git workflows, and development standards."
+      },
+      {
+        "title": "Production & Delivery",
+        "text": "EAS Build, EAS Update, App Store releases, Google Play releases, production debugging, and continuous application improvements."
       }
     ]
   }

@@ -347,6 +347,9 @@ export const ProfileHead = styled.div`
 
 export const Card = styled.div`
   ${surface}
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
   padding: 1.6rem;
 `;
 
@@ -358,7 +361,7 @@ export const Statement = styled.div`
 export const StatementRow = styled.div`
   display: flex;
   gap: 1.4rem;
-  padding: 1.4rem 0;
+  padding: 1.8rem 0;
 
   & + & {
     border-top: 1px solid ${({ theme }) => theme.colors.surfaceBorder};
@@ -370,10 +373,47 @@ export const StatementRow = styled.div`
     font-weight: 600;
     color: ${({ theme }) => theme.colors.accent};
   }
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+  }
   p {
     font-size: 1.4rem;
     line-height: 2.1rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.8);
+  }
+`;
+
+export const StatementHeading = styled.h2`
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+`;
+
+export const Highlight = styled.div`
+  ${surface}
+  padding: 1.4rem 1.6rem;
+
+  & + & {
+    margin-top: 1rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: ${({ theme }) => theme.colors.accent};
+  }
+  p {
+    margin-top: 0.6rem;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: rgba(255, 255, 255, 0.8);
   }
 `;
 
@@ -479,7 +519,7 @@ export const ScreenBar = styled.header`
   background: #0a1a40;
   border-bottom: 1px solid ${({ theme }) => theme.colors.surfaceBorder};
 
-  h1 {
+  h2 {
     font-size: 1.8rem;
     font-weight: 600;
     color: #fff;
@@ -509,4 +549,14 @@ export const ScreenBody = styled.div`
   flex-direction: column;
   gap: 1.6rem;
   padding: 1.6rem 2rem;
+`;
+
+// The page's single <h1>: read by search engines and screen readers, not shown.
+export const PageTitle = styled.h1`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 `;

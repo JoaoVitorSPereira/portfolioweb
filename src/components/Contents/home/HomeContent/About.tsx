@@ -11,9 +11,13 @@ export default function About() {
         <span>{i18next.t('welcomeDescription')}</span>
       </ProfileHead>
       <Card>
-        <Text>{i18next.t('welcomeText')}</Text>
+        <Text>{i18next.t('aboutCard1')}</Text>
+        <Text>{i18next.t('aboutCard2')}</Text>
+        <Text>{i18next.t('aboutCard3')}</Text>
       </Card>
-      <Text>{i18next.t('aboutText')}</Text>
+      <Text>{i18next.t('aboutText1')}</Text>
+      <Text>{i18next.t('aboutText2')}</Text>
+      <Text>{i18next.t('aboutText3')}</Text>
     </>
   );
 }

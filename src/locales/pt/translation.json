@@ -10,10 +10,9 @@
   "moreButton": "Mais",
   "sourceButton": "Código",
   "skillsTitle": "Habilidades e Tecnologias.",
-  "skillsDescription": "Seis anos de imersão em React Native e TypeScript, construindo e entregando apps em produção para fintech, redes sociais, logística e live streaming. Confortável para tocar uma feature da arquitetura até o release na App Store.",
+  "skillsDescription": "Seis anos de experiência com React Native e TypeScript, desenvolvendo e publicando aplicações em produção em fintech, redes sociais, logística e live streaming. Experiência em assumir funcionalidades de ponta a ponta, da arquitetura e implementação até os releases de produção na App Store e no Google Play.",
   "skillsExperience": "Experiência com",
   "aboutTitle": "Sobre mim.",
-  "aboutText": "Comecei a mexer com tecnologia em 2018 e me apaixonei por front end com JavaScript. De lá pra cá migrei para React Native em tempo integral, e hoje atuo como engenheiro mobile sênior construindo apps seguros e de produção usados por milhares de pessoas.",
   "homeHint": "Toque em Portfolio para abrir",
   "hello": "Olá, João",
   "expLabel": "Experiência",
@@ -33,5 +32,14 @@
   "stack": "Stack",
   "aboutTab": "Sobre mim",
   "exploreTitle": "Explorar",
-  "keyTech": "Principais tecnologias"
+  "keyTech": "Principais tecnologias",
+  "aboutCard1": "Mais de 6 anos desenvolvendo e publicando aplicações mobile em produção com React Native e TypeScript, atuando em fintech, redes sociais, logística e live streaming.",
+  "aboutCard2": "Sou especialista em levar funcionalidades mobile da arquitetura até a produção — projetando soluções de fácil manutenção, integrando APIs e SDKs nativos, lidando com requisitos específicos de cada plataforma e entregando releases confiáveis na App Store e no Google Play.",
+  "aboutCard3": "Me importo com arquitetura limpa, decisões técnicas bem pensadas, performance, segurança e uma experiência de uso fluida. Também gosto do lado de engenharia do trabalho: revisar código, definir padrões, quebrar problemas complexos e ajudar outros desenvolvedores a crescer.",
+  "aboutText1": "Minha experiência vai além da implementação. Contribuo com decisões de arquitetura e técnicas, reviso código, delego tarefas, estabeleço padrões de engenharia e ajudo a construir bases de código mais fáceis de manter e escalar.",
+  "aboutText2": "Comecei com JavaScript e desenvolvimento web em 2018, antes de migrar para o React Native e fazer da engenharia mobile o meu foco. Desde então, trabalhei em aplicações que vão de fluxos financeiros e de identidade a logística, plataformas sociais e integrações nativas com o dispositivo.",
+  "aboutText3": "Gosto de resolver problemas complexos de mobile, manter a arquitetura limpa e entregar software que realmente funciona em produção.",
+  "builtTitle": "O que construí ao longo do caminho",
+  "seoTitle": "João Pereira — Desenvolvedor Mobile Sênior",
+  "seoDescription": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming."
 }
