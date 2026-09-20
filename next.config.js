@@ -1,10 +1,19 @@
-const withFonts = require('next-fonts');
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/portfolioweb' : '';
 
-// module.exports = withFonts();
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  basePath,
+  assetPrefix: basePath,
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
+  images: { unoptimized: true },
+  compiler: {
+    styledComponents: true,
+  },
+  turbopack: {
+    root: __dirname,
+  },
+};
 
-// PARA DEPLOY
-
-module.exports = withFonts({
-  basePath: '/portfolioweb',
-  assetPrefix: '/portfolioweb',
-});
+module.exports = nextConfig;

@@ -2,4 +2,4 @@
 
 Setup:
 
-- run `npm i && npm start` or `yarn install && yarn dev`
+- run `npm i && npm run dev`
