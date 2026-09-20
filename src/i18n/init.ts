@@ -1,5 +1,7 @@
 import i18next from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import LanguageDetector, {
+  type DetectorOptions,
+} from 'i18next-browser-languagedetector';
 
 import { languages, defaultLanguage } from './config';
 
@@ -18,7 +20,7 @@ const locales = Object.assign(
 
 // console.log(locales);
 
-const detection = {
+const detection: DetectorOptions = {
   // order and from where user language should be detected
   order: [
     'querystring',
@@ -53,9 +55,6 @@ i18next.use(LanguageDetector).init({
   debug: false,
   interpolation: {
     escapeValue: false, // not needed for react!!
-  },
-  react: {
-    wait: true,
   },
 });
 

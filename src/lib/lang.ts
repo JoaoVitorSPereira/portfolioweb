@@ -10,6 +10,6 @@ export function getAllLanguageSlugs() {
   });
 }
 
-export function getLanguage(lang) {
+export function getLanguage(lang: string) {
   return languages.includes(lang) ? lang : defaultLanguage;
 }

@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { Container } from './styles';
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Container>
       <Header />

@@ -1,8 +1,4 @@
-export default {
-  fonts: {
-    title: 'MADEMirage',
-    main: 'MADEMirage',
-  },
+const theme = {
   colors: {
     primary1: '#f2f5f7',
     background1: '#181818',
@@ -18,3 +14,7 @@ export default {
     xl: 'screen and (max-width: 1280px)',
   },
 };
+
+export type Theme = typeof theme;
+
+export default theme;
