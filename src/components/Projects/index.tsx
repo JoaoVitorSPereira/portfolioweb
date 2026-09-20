@@ -22,23 +22,23 @@ import {
 } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
-const prefix = '/portfolioweb';
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Projects = () => {
   const router = useRouter();
   const { asPath } = router;
 
   return (
-    <Section nopadding id="projects">
+    <Section $nopadding id="projects">
       <SectionDivider />
-      <SectionTitle main>{i18next.t('projectsTitle')}</SectionTitle>
+      <SectionTitle $main>{i18next.t('projectsTitle')}</SectionTitle>
       <GridContainer>
         {projects.map((p, i) => {
           return (
             <BlogCard key={i}>
               <Img src={prefix + p.image} />
               <TitleContent>
-                <HeaderThree title>{p.title}</HeaderThree>
+                <HeaderThree $title>{p.title}</HeaderThree>
                 <Hr />
               </TitleContent>
               <CardInfo className="card-info">

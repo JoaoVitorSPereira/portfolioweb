@@ -23,7 +23,7 @@ const Skills = () => {
 
   return (
     <Section id="tech">
-      <SectionDivider divider />
+      <SectionDivider $divider />
       <SectionTitle>{i18next.t('skillsTitle')}</SectionTitle>
       <SectionText>{i18next.t('skillsDescription')}</SectionText>
       <List>
@@ -32,11 +32,12 @@ const Skills = () => {
             <DiReact size="3rem" />
           </picture>
           <ListContainer>
-            <ListTitle>Front-End</ListTitle>
+            <ListTitle>Mobile</ListTitle>
             <ListParagraph>
               {i18next.t('skillsExperience')} <br />
-              HTML, CSS, JavaScript, React.js, NextJS, ThreeJS, Typescript,
-              Styled-Components.
+              React Native, Expo, Expo Router, React Navigation, Zustand,
+              Redux, Native SDK Integration, Biometrics, App Attest, Secure
+              Storage, EAS Build/Update.
             </ListParagraph>
           </ListContainer>
         </ListItem>
@@ -45,15 +46,29 @@ const Skills = () => {
             <DiReact size="3rem" />
           </picture>
           <ListContainer>
-            <ListTitle>Mobile</ListTitle>
+            <ListTitle>Front-End</ListTitle>
             <ListParagraph>
               {i18next.t('skillsExperience')} <br />
-              React-Native.
+              TypeScript, JavaScript, React, Next.js, Three.js,
+              Styled-Components, React Query.
+            </ListParagraph>
+          </ListContainer>
+        </ListItem>
+        <ListItem>
+          <picture>
+            <DiReact size="3rem" />
+          </picture>
+          <ListContainer>
+            <ListTitle>Tooling & Practices</ListTitle>
+            <ListParagraph>
+              {i18next.t('skillsExperience')} <br />
+              REST APIs, GraphQL, Firebase, Git, App Store Connect, Google
+              Play Console, Figma, Postman.
             </ListParagraph>
           </ListContainer>
         </ListItem>
       </List>
-      <SectionDivider colorAlt />
+      <SectionDivider $colorAlt />
     </Section>
   );
 };

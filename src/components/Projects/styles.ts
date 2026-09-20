@@ -15,7 +15,7 @@ export const GridContainer = styled.section`
   align-items: flex-start;
   column-gap: 2rem;
   row-gap: 3rem;
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -27,7 +27,7 @@ export const BlogCard = styled.div`
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
   width: 400px;
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     width: 100%;
   }
 `;
@@ -37,12 +37,12 @@ export const TitleContent = styled.div`
   width: 100%;
 `;
 
-export const HeaderThree = styled.h3`
+export const HeaderThree = styled.h3<{ $title?: boolean }>`
   font-weight: 700;
   letter-spacing: 2px;
   color: #acb5bb;
   padding: 0.5rem 0;
-  font-size: ${props => (props.title ? '3rem' : '2rem')};
+  font-size: ${props => (props.$title ? '3rem' : '2rem')};
 `;
 
 export const Hr = styled.hr`
@@ -70,7 +70,7 @@ export const CardInfo = styled.p`
   font-style: 2rem;
   line-height: 24px;
   text-align: justify;
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     padding: 0.3rem;
   }
 `;

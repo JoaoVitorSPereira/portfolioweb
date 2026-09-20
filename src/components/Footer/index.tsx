@@ -3,7 +3,7 @@ import i18next from 'i18next';
 
 import { useRouter } from 'next/router';
 
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 import { SocialIcons } from '../Header/styles';
 import {
@@ -26,7 +26,7 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:+55-(13)-99129-8153">(13) 99129-8153</LinkItem>
+          <LinkItem href="tel:+5513997853212">(13) 99785-3212</LinkItem>
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
