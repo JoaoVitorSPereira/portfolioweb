@@ -1,6 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-import GlobalStyles from '../styles/globals';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -32,13 +31,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link
-            rel="preload"
-            as="font"
-            type="font/otf"
-            href="/fonts/MADE_Mirage_Black.otf"
-            crossOrigin=""
-          />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
