@@ -3,7 +3,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { SITE_URL, getResume, links, tools } from '../src/lib/agent';
+import { MCP_URL, SITE_URL, getResume, links, tools } from '../src/lib/agent';
 
 const out = join(process.cwd(), 'public');
 mkdirSync(out, { recursive: true });
@@ -27,7 +27,7 @@ write(
 - [Resume, JSON Resume (PT)](${SITE_URL}/resume.pt.json)
 - [Full profile as text](${SITE_URL}/llms-full.txt): everything on the site in one file
 - [Agent guide](${SITE_URL}/agents.md): WebMCP tools and how to call them
-- [CV (PDF)](${links.cv})
+${MCP_URL ? `- [Remote MCP server](${MCP_URL}): tools get_resume and get_projects over JSON-RPC (streamable HTTP)\n` : ''}- [CV (PDF)](${links.cv})
 
 ## Pages
 - [Portfolio (EN)](${SITE_URL}/en)
@@ -84,7 +84,17 @@ ${tools.map(t => `- \`${t.name}\`: ${t.description}`).join('\n')}
 
 Both accept \`{ "language": "en" | "pt" }\`.
 
-## Static files
+${
+  MCP_URL
+    ? `## Remote MCP server
+Endpoint: ${MCP_URL} (streamable HTTP, JSON-RPC 2.0, no auth). Same tools, same data.
+- Claude: Settings → Connectors → Add custom connector → paste the URL.
+- Cursor / others: add it as a streamable-HTTP MCP server.
+- curl: \`curl -s -X POST ${MCP_URL} -H 'content-type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'\`
+
+`
+    : ''
+}## Static files
 - ${SITE_URL}/resume.json (JSON Resume, EN) and /resume.pt.json (PT)
 - ${SITE_URL}/llms.txt and /llms-full.txt
 - Each page embeds schema.org \`Person\` JSON-LD.

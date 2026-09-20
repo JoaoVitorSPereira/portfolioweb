@@ -6,6 +6,10 @@ import pt from '../locales/pt/translation.json';
 // (browser), the generated /resume.json, llms.txt and the JSON-LD in <head>.
 export const SITE_URL = 'https://joaovitorspereira.github.io/portfolioweb';
 
+// After `npm run worker:deploy`, paste the Worker URL here (e.g. https://portfolio-mcp.<account>.workers.dev/mcp)
+// and it is advertised in llms.txt and agents.md.
+export const MCP_URL = '';
+
 export type Lang = 'en' | 'pt';
 const copy = { en, pt };
 const lang = (l?: string): Lang => (l === 'pt' ? 'pt' : 'en');
