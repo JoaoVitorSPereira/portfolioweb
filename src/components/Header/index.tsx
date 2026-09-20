@@ -3,10 +3,8 @@ import { useRouter } from 'next/router';
 
 import i18next from 'i18next';
 
-import { languages } from '../../i18n/config';
-
-import React, { useState } from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import React from 'react';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { GiUsaFlag, GiBrazilFlag } from 'react-icons/gi';
 
 import {
@@ -20,35 +18,28 @@ import {
   LanguageButtons,
 } from './styles';
 
-const Header = lang => {
+const Header = () => {
   const router = useRouter();
-  // const { locale } = router;
-  // const path = pathname.replace(/\[lang\]/i, lang);
 
   return (
     <Container>
       <Div1>
-        <Link href="/">
-          <a style={{ display: 'flex', alignItems: 'center', color: 'white' }}>
-            <span style={{ fontSize: 26 }}>João Pereira.</span>
-          </a>
+        <Link
+          href="/"
+          style={{ display: 'flex', alignItems: 'center', color: 'white' }}
+        >
+          <span style={{ fontSize: 26 }}>João Pereira.</span>
         </Link>
       </Div1>
       <Div2>
         <li>
-          <Link href="#projects">
-            <NavLink>{i18next.t('projects')}</NavLink>
-          </Link>
+          <NavLink href="#projects">{i18next.t('projects')}</NavLink>
         </li>
         <li>
-          <Link href="#tech">
-            <NavLink>{i18next.t('skills')}</NavLink>
-          </Link>
+          <NavLink href="#tech">{i18next.t('skills')}</NavLink>
         </li>
         <li>
-          <Link href="#about">
-            <NavLink>{i18next.t('about')}</NavLink>
-          </Link>
+          <NavLink href="#about">{i18next.t('about')}</NavLink>
         </li>
       </Div2>
       <LanguageDiv>
