@@ -7,7 +7,10 @@
     "dev": "next dev",
     "prebuild": "tsx scripts/generate-agent-files.ts",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test:mcp": "tsx scripts/test-mcp.ts",
+    "worker:dev": "npx wrangler dev -c worker/wrangler.toml",
+    "worker:deploy": "npx wrangler deploy -c worker/wrangler.toml"
   },
   "dependencies": {
     "i18next": "^26.4.2",
