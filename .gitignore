@@ -36,3 +36,6 @@ yarn-error.log*
 .vercel
 /next-env.d.ts
 *.tsbuildinfo
+
+# wrangler local dev state
+.wrangler/
