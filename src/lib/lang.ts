@@ -1,3 +1,5 @@
+import i18next from 'i18next';
+
 import { languages, defaultLanguage } from '../i18n/config';
 
 export function getSortedLangsData() {
@@ -13,3 +15,5 @@ export function getAllLanguageSlugs() {
 export function getLanguage(lang: string) {
   return languages.includes(lang) ? lang : defaultLanguage;
 }
+
+export const isPt = () => !!i18next.language?.startsWith('pt');
