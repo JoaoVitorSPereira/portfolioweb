@@ -1,7 +1,7 @@
 import React from 'react';
 import { Backdrop, Fragment } from './styles';
 
-const FRAGMENT_COUNT = 70;
+const FRAGMENT_COUNT = 110;
 
 // Seeded so server and client render identical markup (no hydration mismatch).
 let seed = 7;
@@ -20,11 +20,11 @@ const fragments = Array.from({ length: FRAGMENT_COUNT }, () => {
     '--dur': `${dur.toFixed(1)}s`,
     '--delay': `-${rand(0, dur).toFixed(1)}s`,
     '--drift': `${rand(-80, 80).toFixed(0)}px`,
-    '--o': rand(0.15, 0.5).toFixed(2),
+    '--o': rand(0.25, 0.6).toFixed(2),
   } as React.CSSProperties;
 });
 
-// PS3 XMB-style drifting glass particles over a dark navy sweep, pure CSS.
+// PS3 XMB-style drifting dark-blue particles over a bright blue sweep, pure CSS.
 const FragmentsBackground = () => (
   <Backdrop aria-hidden>
     {fragments.map((style, i) => (

@@ -20,7 +20,7 @@ export const Backdrop = styled.div`
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
-  background: linear-gradient(135deg, #0c1220 0%, #181f30 50%, #0c1220 100%);
+  background: linear-gradient(160deg, #4aa8ff 0%, #1f6fff 55%, #63c6ff 100%);
 `;
 
 export const Fragment = styled.span`
@@ -32,8 +32,8 @@ export const Fragment = styled.span`
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(250, 145, 144, var(--o)) 30%,
-    rgba(250, 145, 144, 0) 70%
+    rgba(6, 28, 105, var(--o)) 30%,
+    rgba(6, 28, 105, 0) 70%
   );
   will-change: transform, opacity;
   animation: ${rise} var(--dur) linear var(--delay) infinite;
