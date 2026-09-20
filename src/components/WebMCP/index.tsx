@@ -1,17 +1,40 @@
 import { useEffect } from 'react';
 
-import { tools } from '../../lib/agent';
+import { tools, type ToolInput } from '@/lib/agent';
+
+// Minimal typing for the WebMCP API, which is not in the DOM typings yet.
+interface Registration {
+  unregister?: () => void;
+}
+
+interface ModelContext {
+  registerTool: (
+    tool: {
+      name: string;
+      description: string;
+      inputSchema: object;
+      annotations: { readOnlyHint: boolean };
+      execute: (input: ToolInput) => Promise<unknown>;
+    },
+    options?: { signal: AbortSignal },
+  ) => Promise<Registration | void> | Registration | void;
+}
+
+interface WithModelContext {
+  modelContext?: ModelContext;
+}
 
 // WebMCP: exposes the tools to in-browser AI agents (https://webmachinelearning.github.io/webmcp/).
 // The spec puts the API on `document`; early Chrome previews used `navigator`.
-const WebMCP = () => {
+export default function WebMCP() {
   useEffect(() => {
     const mc =
-      (document as any).modelContext ?? (navigator as any).modelContext;
+      (document as Document & WithModelContext).modelContext ??
+      (navigator as Navigator & WithModelContext).modelContext;
     if (!mc?.registerTool) return;
 
     const ctrl = new AbortController();
-    const registered: any[] = [];
+    const registered: Registration[] = [];
 
     tools.forEach(({ run, ...tool }) => {
       try {
@@ -20,23 +43,21 @@ const WebMCP = () => {
             {
               ...tool,
               annotations: { readOnlyHint: true },
-              execute: async (input: { language?: string }) => run(input),
+              execute: async input => run(input),
             },
             { signal: ctrl.signal },
           ),
         )
-          .then(r => registered.push(r))
+          .then(r => r && registered.push(r))
           .catch(() => {});
       } catch {}
     });
 
     return () => {
       ctrl.abort();
-      registered.forEach(r => r?.unregister?.());
+      registered.forEach(r => r.unregister?.());
     };
   }, []);
 
   return null;
-};
-
-export default WebMCP;
+}

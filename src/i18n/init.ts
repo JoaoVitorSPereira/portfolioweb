@@ -3,20 +3,14 @@ import LanguageDetector, {
   type DetectorOptions,
 } from 'i18next-browser-languagedetector';
 
-import { languages, defaultLanguage } from './config';
+import en from '@/locales/en/translation.json';
+import pt from '@/locales/pt/translation.json';
+import { defaultLanguage } from './config';
 
-const locales = Object.assign(
-  {},
-  ...Object.keys(languages).map(index => {
-    return {
-      [languages[index]]: {
-        translations: require('../locales/' +
-          languages[index] +
-          '/translation.json'),
-      },
-    };
-  }),
-);
+const locales = {
+  en: { translations: en },
+  pt: { translations: pt },
+};
 
 // console.log(locales);
 

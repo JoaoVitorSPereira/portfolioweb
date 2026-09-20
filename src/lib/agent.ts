@@ -1,6 +1,6 @@
-import { experiences, skillGroups, TimeLineData } from '../constants/constants';
-import en from '../locales/en/translation.json';
-import pt from '../locales/pt/translation.json';
+import { experiences, skillGroups, TimeLineData } from '@/constants/constants';
+import en from '@/locales/en/translation.json';
+import pt from '@/locales/pt/translation.json';
 
 // Single source of truth for everything an AI agent can read: the WebMCP tools
 // (browser), the generated /resume.json, llms.txt and the JSON-LD in <head>.
@@ -11,6 +11,10 @@ export const SITE_URL = 'https://joaovitorspereira.github.io/portfolioweb';
 export const MCP_URL = '';
 
 export type Lang = 'en' | 'pt';
+
+export interface ToolInput {
+  language?: string;
+}
 const copy = { en, pt };
 const lang = (l?: string): Lang => (l === 'pt' ? 'pt' : 'en');
 
@@ -103,13 +107,13 @@ export const tools = [
     description:
       'Returns the resume and technical skills of João Pereira (Senior Mobile Developer) as JSON Resume: summary, skills, work history, contact links and CV URL.',
     inputSchema: languageInput,
-    run: (input?: { language?: string }) => getResume(input?.language),
+    run: (input?: ToolInput) => getResume(input?.language),
   },
   {
     name: 'get_projects',
     description:
       'Lists the mobile projects João Pereira has worked on, grouped by domain (fintech, social networking, delivery, live streaming), with what he built and the technologies used.',
     inputSchema: languageInput,
-    run: (input?: { language?: string }) => getProjects(input?.language),
+    run: (input?: ToolInput) => getProjects(input?.language),
   },
 ];

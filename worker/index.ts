@@ -39,7 +39,7 @@ export default {
       return new Response(null, { status: 405, headers: cors });
     }
 
-    let body: any;
+    let body: unknown;
     try {
       body = await req.json();
     } catch {
@@ -54,7 +54,9 @@ export default {
     }
 
     const batch = Array.isArray(body);
-    const replies = (batch ? body : [body]).map(handleRpc).filter(Boolean);
+    const replies = (Array.isArray(body) ? body : [body])
+      .map(handleRpc)
+      .filter(Boolean);
     if (!replies.length)
       return new Response(null, { status: 202, headers: cors });
     return json(batch ? replies : replies[0]);

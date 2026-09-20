@@ -1,4 +1,4 @@
-import { tools } from './agent';
+import { tools, type ToolInput } from './agent';
 
 // Minimal MCP server logic (JSON-RPC 2.0), transport-agnostic so it can be
 // tested in Node and served by the Cloudflare Worker in worker/index.ts.
@@ -6,12 +6,16 @@ const SUPPORTED_VERSIONS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 
 export const serverInfo = { name: 'joao-pereira-portfolio', version: '1.0.0' };
 
-type Rpc = {
+interface Rpc {
   jsonrpc?: string;
   id?: string | number | null;
   method?: string;
-  params?: any;
-};
+  params?: {
+    protocolVersion?: string;
+    name?: string;
+    arguments?: ToolInput;
+  };
+}
 
 const ok = (id: Rpc['id'], result: unknown) => ({ jsonrpc: '2.0', id, result });
 const fail = (id: Rpc['id'], code: number, message: string) => ({
@@ -20,8 +24,10 @@ const fail = (id: Rpc['id'], code: number, message: string) => ({
   error: { code, message },
 });
 
-// Returns the JSON-RPC response, or null for notifications (no reply expected).
-export function handleRpc(msg: Rpc) {
+// Takes untrusted JSON. Returns the JSON-RPC response, or null for
+// notifications (no reply expected).
+export function handleRpc(input: unknown) {
+  const msg = input as Rpc | null;
   if (!msg || typeof msg.method !== 'string') {
     return fail(msg?.id, -32600, 'Invalid Request');
   }
@@ -31,9 +37,10 @@ export function handleRpc(msg: Rpc) {
     case 'initialize': {
       const asked = msg.params?.protocolVersion;
       return ok(msg.id, {
-        protocolVersion: SUPPORTED_VERSIONS.includes(asked)
-          ? asked
-          : SUPPORTED_VERSIONS[0],
+        protocolVersion:
+          asked && SUPPORTED_VERSIONS.includes(asked)
+            ? asked
+            : SUPPORTED_VERSIONS[0],
         capabilities: { tools: {} },
         serverInfo,
         instructions:

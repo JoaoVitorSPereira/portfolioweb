@@ -1,16 +1,20 @@
 import { ThemeProvider } from 'styled-components';
 
-import FragmentsBackground from '../components/FragmentsBackground';
-import theme from '../themes/default';
+import FragmentsBackground from '@/components/FragmentsBackground';
+import theme from '@/themes/default';
 import GlobalStyles from './globals';
 
-const Theme = ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyles />
-    <FragmentsBackground />
+interface Props {
+  children: React.ReactNode;
+}
 
-    {children}
-  </ThemeProvider>
-);
+export default function Theme({ children }: Props) {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <FragmentsBackground />
 
-export default Theme;
+      {children}
+    </ThemeProvider>
+  );
+}

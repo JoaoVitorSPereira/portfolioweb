@@ -1,6 +1,6 @@
 import i18next from 'i18next';
 
-import { languages, defaultLanguage } from '../i18n/config';
+import { languages, defaultLanguage } from '@/i18n/config';
 
 export function getSortedLangsData() {
   return languages;
