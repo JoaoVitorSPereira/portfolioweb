@@ -24,7 +24,7 @@ export const Bar = styled.header`
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  padding: calc(var(--top) + 1.2rem) 2rem 0.4rem;
+  padding: 1.2rem 2rem 0.4rem;
 `;
 
 export const Avatar = styled.div<{ $large?: boolean }>`
@@ -410,9 +410,11 @@ export const ContactRow = styled.a`
 
 /* ---------- navigation ---------- */
 
+// Safe area: layers start below the status bar, so scrolling content is clipped
+// there instead of sliding behind the clock and the wifi/battery icons.
 const layer = css`
   position: absolute;
-  inset: 0;
+  inset: var(--top) 0 0 0;
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: none;
@@ -473,10 +475,8 @@ export const ScreenBar = styled.header`
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: calc(var(--top) + 0.8rem) 1.2rem 1rem;
-  background: rgba(10, 26, 64, 0.88);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 0.8rem 1.2rem 1rem;
+  background: #0a1a40;
   border-bottom: 1px solid ${({ theme }) => theme.colors.surfaceBorder};
 
   h1 {

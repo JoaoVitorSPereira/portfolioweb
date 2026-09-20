@@ -24,25 +24,25 @@ const contacts = [
   },
 ];
 
-const Contact = () => (
-  <>
-    {contacts.map(({ href, title, label, Icon }) => (
-      <ContactRow
-        key={href}
-        href={href}
-        target={href.startsWith('http') ? '_blank' : undefined}
-        rel="noreferrer"
-      >
-        <span>
-          <Icon size="2rem" />
-        </span>
-        <div>
-          <strong>{title}</strong>
-          <small>{label}</small>
-        </div>
-      </ContactRow>
-    ))}
-  </>
-);
-
-export default Contact;
+export default function Contact() {
+  return (
+    <>
+      {contacts.map(({ href, title, label, Icon }) => (
+        <ContactRow
+          key={href}
+          href={href}
+          target={href.startsWith('http') ? '_blank' : undefined}
+          rel="noreferrer"
+        >
+          <span>
+            <Icon size="2rem" />
+          </span>
+          <div>
+            <strong>{title}</strong>
+            <small>{label}</small>
+          </div>
+        </ContactRow>
+      ))}
+    </>
+  );
+}

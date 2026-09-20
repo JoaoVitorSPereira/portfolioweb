@@ -1,12 +1,15 @@
 import Head from 'next/head';
+import type { GetStaticPropsContext, GetStaticPropsResult } from 'next';
 
-import { SITE_URL, getJsonLd } from '../../lib/agent';
-import { getAllLanguageSlugs, getLanguage } from '../../lib/lang';
+import HomeContent from '@/components/Contents/home/HomeContent';
+import { SITE_URL, getJsonLd } from '@/lib/agent';
+import { getAllLanguageSlugs, getLanguage } from '@/lib/lang';
 
-import Phone from '../../components/Phone';
-import BankApp from '../../components/BankApp';
+interface Props {
+  language: string;
+}
 
-export default function Home({ language }: { language: string }) {
+export default function HomeScreen({ language }: Props) {
   return (
     <>
       <Head>
@@ -38,26 +41,24 @@ export default function Home({ language }: { language: string }) {
           }}
         />
       </Head>
-      <Phone>
-        <BankApp />
-      </Phone>
+      <HomeContent />
     </>
   );
 }
 
 export async function getStaticPaths() {
-  const paths = getAllLanguageSlugs();
   return {
-    paths,
+    paths: getAllLanguageSlugs(),
     fallback: false,
   };
 }
 
-export async function getStaticProps({ params }) {
-  const language = getLanguage(params.lang);
+export async function getStaticProps({
+  params,
+}: GetStaticPropsContext): Promise<GetStaticPropsResult<Props>> {
   return {
     props: {
-      language,
+      language: getLanguage(String(params?.lang)),
     },
   };
 }

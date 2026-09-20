@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 
-import { glass } from '../../styles/glass';
+import { glass } from '@/styles/glass';
 
 const load = keyframes`
   from { transform: scaleX(0); }

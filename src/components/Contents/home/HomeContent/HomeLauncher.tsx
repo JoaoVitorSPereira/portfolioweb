@@ -10,7 +10,7 @@ import {
   IoMail,
 } from 'react-icons/io5';
 
-import { AppOpenContext } from '../Phone/context';
+import { AppOpenContext } from '@/components/Phone/context';
 import { menu, type ScreenId } from './menu';
 import {
   Action,
@@ -31,7 +31,11 @@ import {
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-const Home = ({ open }: { open: (screen: ScreenId) => void }) => {
+interface Props {
+  open: (screen: ScreenId) => void;
+}
+
+export default function HomeLauncher({ open }: Props) {
   const [hidden, setHidden] = useState(false);
   const appOpen = useContext(AppOpenContext);
 
@@ -115,6 +119,4 @@ const Home = ({ open }: { open: (screen: ScreenId) => void }) => {
       </div>
     </>
   );
-};
-
-export default Home;
+}

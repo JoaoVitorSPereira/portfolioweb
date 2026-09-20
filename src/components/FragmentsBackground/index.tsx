@@ -25,12 +25,12 @@ const fragments = Array.from({ length: FRAGMENT_COUNT }, () => {
 });
 
 // PS3 XMB-style drifting dark-blue particles over a bright blue sweep, pure CSS.
-const FragmentsBackground = () => (
-  <Backdrop aria-hidden>
-    {fragments.map((style, i) => (
-      <Fragment key={i} style={style} />
-    ))}
-  </Backdrop>
-);
-
-export default FragmentsBackground;
+export default function FragmentsBackground() {
+  return (
+    <Backdrop aria-hidden>
+      {fragments.map((style, i) => (
+        <Fragment key={i} style={style} />
+      ))}
+    </Backdrop>
+  );
+}

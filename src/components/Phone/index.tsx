@@ -28,7 +28,11 @@ import {
 
 const BOOT_MS = 2400;
 
-const Phone = ({ children }: { children: React.ReactNode }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+export default function Phone({ children }: Props) {
   const [booted, setBooted] = useState(false);
   const [open, setOpen] = useState(false);
   const [time, setTime] = useState('');
@@ -137,6 +141,4 @@ const Phone = ({ children }: { children: React.ReactNode }) => {
       </Frame>
     </Stage>
   );
-};
-
-export default Phone;
+}
