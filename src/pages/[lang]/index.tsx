@@ -1,8 +1,5 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import Head from 'next/head';
 
-// Tradutor
-import i18next from 'i18next';
 import { getAllLanguageSlugs, getLanguage } from '../../lib/lang';
 
 // Componentes
@@ -13,20 +10,27 @@ import Skills from '../../components/Skills';
 import Timeline from '../../components/TimeLine';
 import { Layout } from '../../layout';
 import { Section } from '../../styles/GlobalComponents';
-import GraphicModel from '../../components/GraphicBackgroundModel';
 
 export default function Home() {
   return (
-    <Layout>
-      <Section grid>
-        <Welcome />
-        <GraphicModel />
-      </Section>
-      <Projects />
-      <Skills />
-      <Timeline />
-      <Acomplishments />
-    </Layout>
+    <>
+      <Head>
+        <title>João Pereira — Senior React Native Developer</title>
+        <meta
+          name="description"
+          content="Portfolio of João Pereira, a senior React Native developer with 5+ years shipping production mobile apps across fintech, social and logistics."
+        />
+      </Head>
+      <Layout>
+        <Section>
+          <Welcome />
+        </Section>
+        <Projects />
+        <Skills />
+        <Timeline />
+        <Acomplishments />
+      </Layout>
+    </>
   );
 }
 
