@@ -9,7 +9,7 @@ import pt from '@/locales/pt/translation.json';
 
 // Single source of truth for everything an AI agent can read: the WebMCP tools
 // (browser), the generated /resume.json, llms.txt and the JSON-LD in <head>.
-export const SITE_URL = 'https://joaovitorspereira.github.io/portfolioweb';
+export const SITE_URL = 'https://joaopereiradev.vercel.app';
 
 // Worker URL from `npm run worker:deploy`; advertised in llms.txt and agents.md.
 export const MCP_URL =

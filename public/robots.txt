@@ -157,11 +157,11 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://joaovitorspereira.github.io/portfolioweb/sitemap.xml
+Sitemap: https://joaopereiradev.vercel.app/sitemap.xml
 
 # AEO (Answer Engine Optimization) files
 # These help LLMs understand your content better
-# https://joaovitorspereira.github.io/portfolioweb/llms.txt
-# https://joaovitorspereira.github.io/portfolioweb/llms-full.txt
-# https://joaovitorspereira.github.io/portfolioweb/docs.json
-# https://joaovitorspereira.github.io/portfolioweb/ai-index.json
+# https://joaopereiradev.vercel.app/llms.txt
+# https://joaopereiradev.vercel.app/llms-full.txt
+# https://joaopereiradev.vercel.app/docs.json
+# https://joaopereiradev.vercel.app/ai-index.json

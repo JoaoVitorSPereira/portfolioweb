@@ -1,8 +1,8 @@
 ---
 title: "João Pereira — Senior Mobile Developer"
 description: "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming."
-url: https://joaovitorspereira.github.io/portfolioweb/en
-source: https://joaovitorspereira.github.io/portfolioweb/en
+url: https://joaopereiradev.vercel.app/en
+source: https://joaopereiradev.vercel.app/en
 generated_by: aeo.js
 ---
 

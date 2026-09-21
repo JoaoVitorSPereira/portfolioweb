@@ -5,13 +5,13 @@
       "@type": "WebSite",
       "name": "João Pereira — Senior Mobile Developer",
       "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
-      "url": "https://joaovitorspereira.github.io/portfolioweb"
+      "url": "https://joaopereiradev.vercel.app"
     },
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "João Pereira — Senior Mobile Developer",
-      "url": "https://joaovitorspereira.github.io/portfolioweb"
+      "url": "https://joaopereiradev.vercel.app"
     }
   ],
   "pages": {
@@ -66,7 +66,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "João Pereira — Senior Mobile Developer",
-        "url": "https://joaovitorspereira.github.io/portfolioweb/en",
+        "url": "https://joaopereiradev.vercel.app/en",
         "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming."
       },
       {
@@ -77,13 +77,13 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://joaovitorspereira.github.io/portfolioweb/"
+            "item": "https://joaopereiradev.vercel.app/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "En",
-            "item": "https://joaovitorspereira.github.io/portfolioweb/en"
+            "item": "https://joaopereiradev.vercel.app/en"
           }
         ]
       }
@@ -93,7 +93,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "João Pereira — Desenvolvedor Mobile Sênior",
-        "url": "https://joaovitorspereira.github.io/portfolioweb/pt",
+        "url": "https://joaopereiradev.vercel.app/pt",
         "description": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming."
       },
       {
@@ -104,13 +104,13 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://joaovitorspereira.github.io/portfolioweb/"
+            "item": "https://joaopereiradev.vercel.app/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Pt",
-            "item": "https://joaovitorspereira.github.io/portfolioweb/pt"
+            "item": "https://joaopereiradev.vercel.app/pt"
           }
         ]
       }

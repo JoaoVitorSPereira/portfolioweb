@@ -3,16 +3,16 @@
 > Senior Mobile Developer. Over 6 years shipping production mobile apps for fintech, social and logistics platforms. I care about clean architecture, smooth UI and getting things through App Store review without losing my mind.
 
 ## Machine-readable
-- [Resume, JSON Resume (EN)](https://joaovitorspereira.github.io/portfolioweb/resume.json): resume, skills and work history
-- [Resume, JSON Resume (PT)](https://joaovitorspereira.github.io/portfolioweb/resume.pt.json)
-- [Full profile as text](https://joaovitorspereira.github.io/portfolioweb/llms-full.txt): everything on the site in one file
-- [Agent guide](https://joaovitorspereira.github.io/portfolioweb/agents.md): WebMCP tools and how to call them
+- [Resume, JSON Resume (EN)](https://joaopereiradev.vercel.app/resume.json): resume, skills and work history
+- [Resume, JSON Resume (PT)](https://joaopereiradev.vercel.app/resume.pt.json)
+- [Full profile as text](https://joaopereiradev.vercel.app/llms-full.txt): everything on the site in one file
+- [Agent guide](https://joaopereiradev.vercel.app/agents.md): WebMCP tools and how to call them
 - [Remote MCP server](https://portfolio-mcp.joaovitorspereira.workers.dev/mcp): tools get_resume, get_projects, check_availability, book_intro over JSON-RPC (streamable HTTP)
-- [CV (PDF)](https://joaovitorspereira.github.io/portfolioweb/cvfolder/JoaoPereira_CV.pdf)
+- [CV (PDF)](https://joaopereiradev.vercel.app/cvfolder/JoaoPereira_CV.pdf)
 
 ## Pages
-- [Portfolio (EN)](https://joaovitorspereira.github.io/portfolioweb/en)
-- [Portfolio (PT)](https://joaovitorspereira.github.io/portfolioweb/pt)
+- [Portfolio (EN)](https://joaopereiradev.vercel.app/en)
+- [Portfolio (PT)](https://joaopereiradev.vercel.app/pt)
 
 ## Contact
 - Email: joaovitorspereira@gmail.com

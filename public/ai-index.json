@@ -1,87 +1,15 @@
 {
   "version": "1.0",
-  "generated": "2026-09-21T12:35:38.194Z",
+  "generated": "2026-09-21T12:42:27.306Z",
   "site": {
     "title": "João Pereira — Senior Mobile Developer",
     "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
-    "url": "https://joaovitorspereira.github.io/portfolioweb"
+    "url": "https://joaopereiradev.vercel.app"
   },
   "entries": [
     {
-      "id": "077fb20eba42550b",
-      "url": "https://joaovitorspereira.github.io/portfolioweb/en",
-      "title": "João Pereira — Senior Mobile Developer (Part 4)",
-      "content": "Developed reusable React Native components and mobile functionality for live video streaming experiences. Focused on building maintainable interfaces, improving application usability, and optimizing mobile application performance.\n\nWorked closely with product and design teams to translate requirements into production-ready mobile features.\n\nTechnologies: React Native, TypeScript, JavaScript, Reusable Components, Mobile UI, Performance Optimization\n\n### Frontend & Mobile Developer\n\nDeveloped applications for web and mobile platforms using React and React Native, building reusable UI components and integrating applications with REST APIs, contributing to production-ready features and application maintenance.\n\nWorked alongside senior developers throughout the development process, contributing to feature implementation, code maintenance, releases, and improvements to existing applications.\n\nTechnologies: React, React Native, JavaScript, TypeScript, REST APIs, Reusable UI Components, Git\n\n## Contact\n- Email: joaovitorspereira@gmail.com\n- GitHub: https://github.com/JoaoVitorSPereira\n- LinkedIn: https://www.linkedin.com/in/joaovitorspereira/",
-      "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
-      "keywords": [
-        "native",
-        "react",
-        "mobile",
-        "application",
-        "with",
-        "apis",
-        "rest",
-        "production",
-        "features",
-        "typescript"
-      ],
-      "metadata": {
-        "chunkIndex": 3,
-        "totalChunks": 4,
-        "sourcePath": "/en"
-      }
-    },
-    {
-      "id": "460b97a25f682ad1",
-      "url": "https://joaovitorspereira.github.io/portfolioweb/pt",
-      "title": "João Pereira — Desenvolvedor Mobile Sênior (Part 3)",
-      "content": "Technologies: React Native, Expo, TypeScript, Zustand, React Query, REST APIs, Expo Router, Native SDK Integration, Kotlin, Native Bridge, POS, Architecture, Code Review, Git Branching Strategy, App Attest, Biometrics, EAS Update, Apple App Store, Google Play\n\n### Engenheiro de Software Mobile\n\nEngenheiro de Software Mobile em uma plataforma de rede social de larga escala usada por milhares de pessoas, construída em torno de comunidades, feed em tempo real e interações ricas em posts. Desenvolvi e mantive funcionalidades em produção com foco em UI escalável, performance e engajamento.\n\nConstruí o lado cliente das principais funcionalidades sociais: comunidades, publicação no feed, conteúdo incorporado (embed) nos posts, curtidas e descurtidas em tempo real e comentários em cada post. Utilizei GraphQL com Apollo Client para consultar e alterar dados e manter feed, reações e comentários atualizados ao vivo.\n\nTrabalhei com um backend baseado em controle de acesso por papéis (RBAC), adaptando a interface e as ações disponíveis para cada usuário de acordo com seu papel e suas permissões.\n\nMigrei uma aplicação React Native existente do React Native CLI para o Expo, melhorando a manutenibilidade e simplificando o fluxo de desenvolvimento e deploy. Construí funcionalidades de gamificação e engajamento, componentes de UI reutilizáveis e performáticos e experiências multiplataforma com React Native Web, colaborando com designers, engenheiros de backend e QA para entregar e manter funcionalidades em produção.\n\nTechnologies: React Native, Expo, React Native Web, TypeScript, GraphQL, Apollo Client, React Query, Styled Components, REST APIs\n\n### Engenheiro de Software Mobile\n\nDesenvolvi funcionalidades mobile focadas em gestão de entregas, rastreamento em tempo real e recursos baseados em localização. Implementei a integração com o Google Maps, visualização de rotas e fluxos de entrega, além de recursos de rastreamento de entregas.",
-      "description": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming.",
-      "keywords": [
-        "react",
-        "native",
-        "mobile",
-        "para",
-        "funcionalidades",
-        "produção",
-        "apis",
-        "rest",
-        "aplicação",
-        "typescript"
-      ],
-      "metadata": {
-        "chunkIndex": 2,
-        "totalChunks": 4,
-        "sourcePath": "/pt"
-      }
-    },
-    {
-      "id": "7a0b9587d58cb802",
-      "url": "https://joaovitorspereira.github.io/portfolioweb/en",
-      "title": "João Pereira — Senior Mobile Developer (Part 1)",
-      "content": "Over 6 years shipping production mobile apps for fintech, social and logistics platforms. I care about clean architecture, smooth UI and getting things through App Store review without losing my mind.\n\n## FAQ\n### Who is João Pereira?\n\nJoão Pereira is a Senior Mobile Developer with over 6 years of experience building production React Native and TypeScript apps for fintech, social networking, logistics and live streaming platforms.\n\n### What does he specialize in?\n\nTaking mobile features from architecture to production: designing maintainable solutions, integrating APIs and native SDKs, handling platform-specific requirements and shipping reliable releases to the App Store and Google Play.\n\n### How many apps has he published?\n\nHe has published 10+ apps across fintech, social networking, delivery and live streaming.\n\n### Is he available for new work?\n\nYes. He is open to freelance or contract work and to full-time roles. Reach him through the Contact screen, by email at joaovitorspereira@gmail.com, or with the book_intro tool of the MCP server.\n\n### Can an AI agent read this portfolio?\n\nYes. It exposes llms.txt, a JSON Resume file, WebMCP tools in the browser and a remote MCP server with the tools get_resume, get_projects, check_availability and book_intro.\n\n## Skills\n- Mobile: React Native, Expo, Expo Router, React Navigation, TypeScript, Zustand, Redux, Context API, React Query, React Native Web, Native SDK Integration, Native Modules, Kotlin, Biometrics, App Attest, Secure Storage, Deep Linking, Push Notifications, EAS Build, EAS Update\n- Front-End: TypeScript, JavaScript, React, Next.js, React Native Web, Styled Components, React Query, GraphQL, Three.js, REST APIs\n- Tooling & Practices: Git, GitHub, Firebase, REST APIs, GraphQL, Postman, Android Studio, Xcode, Apple App Store Connect, Google Play Console, EAS, CI/CD, Figma\n\n## Work\n### Senior Mobile Developer",
-      "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
-      "keywords": [
-        "native",
-        "react",
-        "mobile",
-        "application",
-        "with",
-        "apis",
-        "rest",
-        "production",
-        "features",
-        "typescript"
-      ],
-      "metadata": {
-        "chunkIndex": 0,
-        "totalChunks": 4,
-        "sourcePath": "/en"
-      }
-    },
-    {
-      "id": "7f16e87066fc11ee",
-      "url": "https://joaovitorspereira.github.io/portfolioweb/en",
+      "id": "172991af29b9cc83",
+      "url": "https://joaopereiradev.vercel.app/en",
       "title": "João Pereira — Senior Mobile Developer (Part 3)",
       "content": "Mobile Software Engineer on a large-scale social networking platform used by thousands of users, built around communities, a live feed, and rich post interactions. Developed and maintained production features focused on scalable UI, performance, and user engagement.\n\nBuilt the client side of the core social features: communities, feed posting, embedded content inside posts, real-time likes and dislikes, and comments on each post. Used GraphQL with Apollo Client to query and mutate data and keep the feed, reactions, and comments up to date live.\n\nWorked against a role-based access control (RBAC) backend, shaping the interface and the actions available to each user around their role and permissions.\n\nMigrated an existing React Native application from React Native CLI to Expo, improving maintainability and simplifying the development and deployment workflow. Built gamification and engagement features, reusable and performant UI components, and cross-platform experiences using React Native Web, collaborating with designers, backend engineers, and QA to deliver and maintain production features.\n\nTechnologies: React Native, Expo, React Native Web, TypeScript, GraphQL, Apollo Client, React Query, Styled Components, REST APIs\n\n### Mobile Software Engineer\n\nDeveloped mobile features focused on delivery management, real-time tracking, and location-based functionality. Implemented Google Maps integration, route visualization and delivery workflows, as well as delivery tracking capabilities.\n\nIntegrated Firebase Cloud Messaging for push notifications and consumed REST APIs while collaborating with backend developers. Also participated in application publishing, maintenance, and production support.\n\nTechnologies: React Native, Firebase, Firebase Cloud Messaging, Google Maps, Redux, REST APIs\n\n### Mobile Software Engineer",
       "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
@@ -104,32 +32,32 @@
       }
     },
     {
-      "id": "a3e7c9f97d9e388e",
-      "url": "https://joaovitorspereira.github.io/portfolioweb/pt",
-      "title": "João Pereira — Desenvolvedor Mobile Sênior (Part 4)",
-      "content": "Integrei o Firebase Cloud Messaging para push notifications e consumi APIs REST colaborando com desenvolvedores de backend. Também participei da publicação, manutenção e suporte em produção do aplicativo.\n\nTechnologies: React Native, Firebase, Firebase Cloud Messaging, Google Maps, Redux, REST APIs\n\n### Engenheiro de Software Mobile\n\nDesenvolvi componentes React Native reutilizáveis e funcionalidades mobile para experiências de live streaming. Foquei em construir interfaces de fácil manutenção, melhorar a usabilidade e otimizar a performance do aplicativo.\n\nTrabalhei de perto com os times de produto e design para transformar requisitos em funcionalidades mobile prontas para produção.\n\nTechnologies: React Native, TypeScript, JavaScript, Reusable Components, Mobile UI, Performance Optimization\n\n### Desenvolvedor Frontend & Mobile\n\nDesenvolvi aplicações para web e mobile usando React e React Native, construindo componentes de UI reutilizáveis e integrando as aplicações com APIs REST, contribuindo para funcionalidades prontas para produção e para a manutenção das aplicações.\n\nTrabalhei junto a desenvolvedores seniores em todo o processo de desenvolvimento, contribuindo com a implementação de funcionalidades, manutenção de código, releases e melhorias em aplicações existentes.\n\nTechnologies: React, React Native, JavaScript, TypeScript, REST APIs, Reusable UI Components, Git\n\n## Contato\n- Email: joaovitorspereira@gmail.com\n- GitHub: https://github.com/JoaoVitorSPereira\n- LinkedIn: https://www.linkedin.com/in/joaovitorspereira/",
-      "description": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming.",
+      "id": "1b219b7564f9729f",
+      "url": "https://joaopereiradev.vercel.app/en",
+      "title": "João Pereira — Senior Mobile Developer (Part 1)",
+      "content": "Over 6 years shipping production mobile apps for fintech, social and logistics platforms. I care about clean architecture, smooth UI and getting things through App Store review without losing my mind.\n\n## FAQ\n### Who is João Pereira?\n\nJoão Pereira is a Senior Mobile Developer with over 6 years of experience building production React Native and TypeScript apps for fintech, social networking, logistics and live streaming platforms.\n\n### What does he specialize in?\n\nTaking mobile features from architecture to production: designing maintainable solutions, integrating APIs and native SDKs, handling platform-specific requirements and shipping reliable releases to the App Store and Google Play.\n\n### How many apps has he published?\n\nHe has published 10+ apps across fintech, social networking, delivery and live streaming.\n\n### Is he available for new work?\n\nYes. He is open to freelance or contract work and to full-time roles. Reach him through the Contact screen, by email at joaovitorspereira@gmail.com, or with the book_intro tool of the MCP server.\n\n### Can an AI agent read this portfolio?\n\nYes. It exposes llms.txt, a JSON Resume file, WebMCP tools in the browser and a remote MCP server with the tools get_resume, get_projects, check_availability and book_intro.\n\n## Skills\n- Mobile: React Native, Expo, Expo Router, React Navigation, TypeScript, Zustand, Redux, Context API, React Query, React Native Web, Native SDK Integration, Native Modules, Kotlin, Biometrics, App Attest, Secure Storage, Deep Linking, Push Notifications, EAS Build, EAS Update\n- Front-End: TypeScript, JavaScript, React, Next.js, React Native Web, Styled Components, React Query, GraphQL, Three.js, REST APIs\n- Tooling & Practices: Git, GitHub, Firebase, REST APIs, GraphQL, Postman, Android Studio, Xcode, Apple App Store Connect, Google Play Console, EAS, CI/CD, Figma\n\n## Work\n### Senior Mobile Developer",
+      "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
       "keywords": [
-        "react",
         "native",
+        "react",
         "mobile",
-        "para",
-        "funcionalidades",
-        "produção",
+        "application",
+        "with",
         "apis",
         "rest",
-        "aplicação",
+        "production",
+        "features",
         "typescript"
       ],
       "metadata": {
-        "chunkIndex": 3,
+        "chunkIndex": 0,
         "totalChunks": 4,
-        "sourcePath": "/pt"
+        "sourcePath": "/en"
       }
     },
     {
-      "id": "a71a49f5668f1c68",
-      "url": "https://joaovitorspereira.github.io/portfolioweb/en",
+      "id": "6154aee8ea20d97f",
+      "url": "https://joaopereiradev.vercel.app/en",
       "title": "João Pereira — Senior Mobile Developer (Part 2)",
       "content": "Senior Mobile Engineer responsible for the end-to-end technical direction of a fintech mobile application built from the ground up. Owned the mobile architecture and made key technical decisions focused on scalability, maintainability, security, and long-term code quality.\n\nLed the day-to-day engineering workflow, including breaking down technical requirements, delegating work to junior developers, conducting code reviews, and establishing development standards and engineering practices across the project. Defined and maintained the project's Git workflow, branching strategy, and versioning structure to support a consistent and controlled development process.\n\nDesigned and implemented secure authentication and identity flows using encrypted storage, App Attest, biometrics, and platform-level security capabilities. Developed and maintained REST API integrations in close collaboration with backend engineers, ensuring reliable communication between the mobile application and backend services.\n\nOwned the mobile release lifecycle across iOS and Android, including production builds, App Store and Google Play releases, and over-the-air updates. Investigated and resolved production issues while continuously improving application stability, performance, and maintainability.\n\nAlso worked on a POS application integrating a third-party native SDK. Designed and implemented native Kotlin modules and a React Native native bridge to expose the SDK's capabilities to the JavaScript layer, keeping the application architecture centered around React Native while encapsulating device-specific and SDK-level functionality within the native layer.\n\nTechnologies: React Native, Expo, TypeScript, Zustand, React Query, REST APIs, Expo Router, Native SDK Integration, Kotlin, Native Bridge, POS, Architecture, Code Review, Git Branching Strategy, App Attest, Biometrics, EAS Update, Apple App Store, Google Play\n\n### Mobile Software Engineer",
       "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
@@ -152,8 +80,56 @@
       }
     },
     {
-      "id": "cce29e6d53bf5a92",
-      "url": "https://joaovitorspereira.github.io/portfolioweb/pt",
+      "id": "76da4e07d295340d",
+      "url": "https://joaopereiradev.vercel.app/pt",
+      "title": "João Pereira — Desenvolvedor Mobile Sênior (Part 1)",
+      "content": "Mais de 6 anos entregando apps mobile em produção para fintech, redes sociais e logística. Gosto de arquitetura limpa, UI fluida e sobreviver à revisão da App Store sem perder a cabeça.\n\n## Perguntas frequentes\n### Quem é João Pereira?\n\nJoão Pereira é Desenvolvedor Mobile Sênior com mais de 6 anos de experiência criando aplicativos React Native e TypeScript em produção para fintech, redes sociais, logística e plataformas de live streaming.\n\n### Em que ele é especialista?\n\nLevar funcionalidades mobile da arquitetura à produção: projetar soluções sustentáveis, integrar APIs e SDKs nativos, lidar com requisitos de cada plataforma e publicar versões confiáveis na App Store e no Google Play.\n\n### Quantos aplicativos ele já publicou?\n\nEle já publicou mais de 10 aplicativos em fintech, redes sociais, delivery e live streaming.\n\n### Ele está disponível para novos trabalhos?\n\nSim. Está aberto a trabalhos freelance ou por contrato e a vagas em tempo integral. Fale com ele pela tela de Contato, pelo e-mail joaovitorspereira@gmail.com ou pela ferramenta book_intro do servidor MCP.\n\n### Um agente de IA consegue ler este portfólio?\n\nSim. Ele expõe llms.txt, um arquivo JSON Resume, ferramentas WebMCP no navegador e um servidor MCP remoto com as ferramentas get_resume, get_projects, check_availability e book_intro.\n\n## Competências\n- Mobile: React Native, Expo, Expo Router, React Navigation, TypeScript, Zustand, Redux, Context API, React Query, React Native Web, Native SDK Integration, Native Modules, Kotlin, Biometrics, App Attest, Secure Storage, Deep Linking, Push Notifications, EAS Build, EAS Update\n- Front-End: TypeScript, JavaScript, React, Next.js, React Native Web, Styled Components, React Query, GraphQL, Three.js, REST APIs\n- Tooling & Practices: Git, GitHub, Firebase, REST APIs, GraphQL, Postman, Android Studio, Xcode, Apple App Store Connect, Google Play Console, EAS, CI/CD, Figma\n\n## Experiência\n### Desenvolvedor Mobile Sênior",
+      "description": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming.",
+      "keywords": [
+        "react",
+        "native",
+        "mobile",
+        "para",
+        "funcionalidades",
+        "produção",
+        "apis",
+        "rest",
+        "aplicação",
+        "typescript"
+      ],
+      "metadata": {
+        "chunkIndex": 0,
+        "totalChunks": 4,
+        "sourcePath": "/pt"
+      }
+    },
+    {
+      "id": "878299506d5e200c",
+      "url": "https://joaopereiradev.vercel.app/pt",
+      "title": "João Pereira — Desenvolvedor Mobile Sênior (Part 4)",
+      "content": "Integrei o Firebase Cloud Messaging para push notifications e consumi APIs REST colaborando com desenvolvedores de backend. Também participei da publicação, manutenção e suporte em produção do aplicativo.\n\nTechnologies: React Native, Firebase, Firebase Cloud Messaging, Google Maps, Redux, REST APIs\n\n### Engenheiro de Software Mobile\n\nDesenvolvi componentes React Native reutilizáveis e funcionalidades mobile para experiências de live streaming. Foquei em construir interfaces de fácil manutenção, melhorar a usabilidade e otimizar a performance do aplicativo.\n\nTrabalhei de perto com os times de produto e design para transformar requisitos em funcionalidades mobile prontas para produção.\n\nTechnologies: React Native, TypeScript, JavaScript, Reusable Components, Mobile UI, Performance Optimization\n\n### Desenvolvedor Frontend & Mobile\n\nDesenvolvi aplicações para web e mobile usando React e React Native, construindo componentes de UI reutilizáveis e integrando as aplicações com APIs REST, contribuindo para funcionalidades prontas para produção e para a manutenção das aplicações.\n\nTrabalhei junto a desenvolvedores seniores em todo o processo de desenvolvimento, contribuindo com a implementação de funcionalidades, manutenção de código, releases e melhorias em aplicações existentes.\n\nTechnologies: React, React Native, JavaScript, TypeScript, REST APIs, Reusable UI Components, Git\n\n## Contato\n- Email: joaovitorspereira@gmail.com\n- GitHub: https://github.com/JoaoVitorSPereira\n- LinkedIn: https://www.linkedin.com/in/joaovitorspereira/",
+      "description": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming.",
+      "keywords": [
+        "react",
+        "native",
+        "mobile",
+        "para",
+        "funcionalidades",
+        "produção",
+        "apis",
+        "rest",
+        "aplicação",
+        "typescript"
+      ],
+      "metadata": {
+        "chunkIndex": 3,
+        "totalChunks": 4,
+        "sourcePath": "/pt"
+      }
+    },
+    {
+      "id": "c7c770894d08a399",
+      "url": "https://joaopereiradev.vercel.app/pt",
       "title": "João Pereira — Desenvolvedor Mobile Sênior (Part 2)",
       "content": "Atuação como Senior Mobile Engineer, responsável pela direção técnica de uma aplicação mobile fintech desenvolvida do zero. Responsável pela arquitetura da aplicação de ponta a ponta e pelas principais decisões técnicas, com foco em escalabilidade, manutenibilidade, segurança e qualidade de código a longo prazo.\n\nLiderança do fluxo de desenvolvimento no dia a dia, incluindo a divisão de requisitos técnicos, delegação de tarefas para desenvolvedores juniores, revisão de código e definição de padrões e boas práticas de engenharia adotados pelo projeto. Definição e manutenção da estratégia de versionamento do projeto, incluindo fluxo de trabalho com Git, estratégia de branches e estrutura de versionamento, garantindo um processo de desenvolvimento consistente e controlado.\n\nDesenvolvimento de fluxos seguros de autenticação e identidade utilizando armazenamento criptografado, App Attest, biometria e recursos de segurança das plataformas. Desenvolvimento e manutenção de integrações com APIs REST em colaboração direta com os desenvolvedores de backend, garantindo uma comunicação confiável entre a aplicação mobile e os serviços backend.\n\nResponsável pelo ciclo de publicação da aplicação em iOS e Android, incluindo criação de builds de produção, publicação na App Store e Google Play e gerenciamento de atualizações OTA. Atuação na investigação e resolução de problemas em produção, além de melhorias contínuas de estabilidade, performance e manutenibilidade da aplicação.\n\nTambém atuei no desenvolvimento de uma aplicação POS integrada a um SDK nativo de terceiros. Desenvolvi módulos nativos em Kotlin e uma ponte nativa (React Native Native Bridge) para disponibilizar as funcionalidades do SDK para a camada JavaScript, mantendo a aplicação centralizada em React Native enquanto as responsabilidades específicas do dispositivo e do SDK permanecem encapsuladas na camada nativa.",
       "description": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming.",
@@ -176,10 +152,34 @@
       }
     },
     {
-      "id": "cf7e860b20e6db5f",
-      "url": "https://joaovitorspereira.github.io/portfolioweb/pt",
-      "title": "João Pereira — Desenvolvedor Mobile Sênior (Part 1)",
-      "content": "Mais de 6 anos entregando apps mobile em produção para fintech, redes sociais e logística. Gosto de arquitetura limpa, UI fluida e sobreviver à revisão da App Store sem perder a cabeça.\n\n## Perguntas frequentes\n### Quem é João Pereira?\n\nJoão Pereira é Desenvolvedor Mobile Sênior com mais de 6 anos de experiência criando aplicativos React Native e TypeScript em produção para fintech, redes sociais, logística e plataformas de live streaming.\n\n### Em que ele é especialista?\n\nLevar funcionalidades mobile da arquitetura à produção: projetar soluções sustentáveis, integrar APIs e SDKs nativos, lidar com requisitos de cada plataforma e publicar versões confiáveis na App Store e no Google Play.\n\n### Quantos aplicativos ele já publicou?\n\nEle já publicou mais de 10 aplicativos em fintech, redes sociais, delivery e live streaming.\n\n### Ele está disponível para novos trabalhos?\n\nSim. Está aberto a trabalhos freelance ou por contrato e a vagas em tempo integral. Fale com ele pela tela de Contato, pelo e-mail joaovitorspereira@gmail.com ou pela ferramenta book_intro do servidor MCP.\n\n### Um agente de IA consegue ler este portfólio?\n\nSim. Ele expõe llms.txt, um arquivo JSON Resume, ferramentas WebMCP no navegador e um servidor MCP remoto com as ferramentas get_resume, get_projects, check_availability e book_intro.\n\n## Competências\n- Mobile: React Native, Expo, Expo Router, React Navigation, TypeScript, Zustand, Redux, Context API, React Query, React Native Web, Native SDK Integration, Native Modules, Kotlin, Biometrics, App Attest, Secure Storage, Deep Linking, Push Notifications, EAS Build, EAS Update\n- Front-End: TypeScript, JavaScript, React, Next.js, React Native Web, Styled Components, React Query, GraphQL, Three.js, REST APIs\n- Tooling & Practices: Git, GitHub, Firebase, REST APIs, GraphQL, Postman, Android Studio, Xcode, Apple App Store Connect, Google Play Console, EAS, CI/CD, Figma\n\n## Experiência\n### Desenvolvedor Mobile Sênior",
+      "id": "ca3c61ccf1a0503d",
+      "url": "https://joaopereiradev.vercel.app/en",
+      "title": "João Pereira — Senior Mobile Developer (Part 4)",
+      "content": "Developed reusable React Native components and mobile functionality for live video streaming experiences. Focused on building maintainable interfaces, improving application usability, and optimizing mobile application performance.\n\nWorked closely with product and design teams to translate requirements into production-ready mobile features.\n\nTechnologies: React Native, TypeScript, JavaScript, Reusable Components, Mobile UI, Performance Optimization\n\n### Frontend & Mobile Developer\n\nDeveloped applications for web and mobile platforms using React and React Native, building reusable UI components and integrating applications with REST APIs, contributing to production-ready features and application maintenance.\n\nWorked alongside senior developers throughout the development process, contributing to feature implementation, code maintenance, releases, and improvements to existing applications.\n\nTechnologies: React, React Native, JavaScript, TypeScript, REST APIs, Reusable UI Components, Git\n\n## Contact\n- Email: joaovitorspereira@gmail.com\n- GitHub: https://github.com/JoaoVitorSPereira\n- LinkedIn: https://www.linkedin.com/in/joaovitorspereira/",
+      "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
+      "keywords": [
+        "native",
+        "react",
+        "mobile",
+        "application",
+        "with",
+        "apis",
+        "rest",
+        "production",
+        "features",
+        "typescript"
+      ],
+      "metadata": {
+        "chunkIndex": 3,
+        "totalChunks": 4,
+        "sourcePath": "/en"
+      }
+    },
+    {
+      "id": "cc02f06e4ece22fa",
+      "url": "https://joaopereiradev.vercel.app/pt",
+      "title": "João Pereira — Desenvolvedor Mobile Sênior (Part 3)",
+      "content": "Technologies: React Native, Expo, TypeScript, Zustand, React Query, REST APIs, Expo Router, Native SDK Integration, Kotlin, Native Bridge, POS, Architecture, Code Review, Git Branching Strategy, App Attest, Biometrics, EAS Update, Apple App Store, Google Play\n\n### Engenheiro de Software Mobile\n\nEngenheiro de Software Mobile em uma plataforma de rede social de larga escala usada por milhares de pessoas, construída em torno de comunidades, feed em tempo real e interações ricas em posts. Desenvolvi e mantive funcionalidades em produção com foco em UI escalável, performance e engajamento.\n\nConstruí o lado cliente das principais funcionalidades sociais: comunidades, publicação no feed, conteúdo incorporado (embed) nos posts, curtidas e descurtidas em tempo real e comentários em cada post. Utilizei GraphQL com Apollo Client para consultar e alterar dados e manter feed, reações e comentários atualizados ao vivo.\n\nTrabalhei com um backend baseado em controle de acesso por papéis (RBAC), adaptando a interface e as ações disponíveis para cada usuário de acordo com seu papel e suas permissões.\n\nMigrei uma aplicação React Native existente do React Native CLI para o Expo, melhorando a manutenibilidade e simplificando o fluxo de desenvolvimento e deploy. Construí funcionalidades de gamificação e engajamento, componentes de UI reutilizáveis e performáticos e experiências multiplataforma com React Native Web, colaborando com designers, engenheiros de backend e QA para entregar e manter funcionalidades em produção.\n\nTechnologies: React Native, Expo, React Native Web, TypeScript, GraphQL, Apollo Client, React Query, Styled Components, REST APIs\n\n### Engenheiro de Software Mobile\n\nDesenvolvi funcionalidades mobile focadas em gestão de entregas, rastreamento em tempo real e recursos baseados em localização. Implementei a integração com o Google Maps, visualização de rotas e fluxos de entrega, além de recursos de rastreamento de entregas.",
       "description": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming.",
       "keywords": [
         "react",
@@ -194,7 +194,7 @@
         "typescript"
       ],
       "metadata": {
-        "chunkIndex": 0,
+        "chunkIndex": 2,
         "totalChunks": 4,
         "sourcePath": "/pt"
       }

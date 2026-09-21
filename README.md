@@ -2,7 +2,7 @@
 
 Personal portfolio of a Senior Mobile Developer, presented as a **phone that boots up in the browser**: you tap the *Portfolio* app icon and it opens a mobile-style app with a launcher, screens that slide in like a navigation stack, and a status bar with a live clock. It is bilingual (EN/PT), statically exported, and also readable by AI agents.
 
-Live: <https://joaovitorspereira.github.io/portfolioweb>
+Live: <https://joaopereiradev.vercel.app>
 
 ## Tech stack
 
