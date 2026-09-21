@@ -339,13 +339,15 @@ export const BigCard = styled.div`
   }
 `;
 
-export const BigChips = styled.div`
+export const BigChips = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-top: 1.4rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
 
-  span {
+  li {
     padding: 0.5rem 1rem;
     border-radius: 0.8rem;
     font-size: 1.2rem;

@@ -20,7 +20,7 @@ export default function Skills() {
             </h3>
             <BigChips>
               {g.tags.map(t => (
-                <span key={t}>{t}</span>
+                <li key={t}>{t}</li>
               ))}
             </BigChips>
           </BigCard>

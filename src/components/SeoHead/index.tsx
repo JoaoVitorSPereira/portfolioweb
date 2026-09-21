@@ -46,12 +46,13 @@ export default function SeoHead({ language }: Props) {
         title="llms.txt"
         href={`${SITE_URL}/llms.txt`}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getJsonLd(language)),
-        }}
-      />
+      {getJsonLd(language).map(node => (
+        <script
+          key={node['@id']}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(node) }}
+        />
+      ))}
     </Head>
   );
 }

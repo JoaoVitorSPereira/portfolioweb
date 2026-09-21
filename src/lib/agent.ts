@@ -101,8 +101,9 @@ export function getFaq(language?: string) {
   return copy[lang(language)].faq;
 }
 
-// One @graph: the Person, the site, this page (a ProfilePage about the Person)
-// and the visible FAQ, so answer engines can quote it.
+// Separate top-level JSON-LD nodes (one <script> each, linked by @id): the
+// Person, the site, this page and the visible FAQ, so answer engines can quote
+// it. Kept out of a single @graph because simple parsers only read top-level nodes.
 export function getJsonLd(language?: string) {
   const l = lang(language);
   const url = `${SITE_URL}/${l}`;
@@ -118,40 +119,37 @@ export function getJsonLd(language?: string) {
     sameAs: [links.github, links.linkedin],
     knowsAbout: skillGroups.flatMap(g => g.tags),
   };
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [
-      person,
-      {
-        '@type': 'WebSite',
-        '@id': `${SITE_URL}/#website`,
-        name: 'João Pereira',
-        url: SITE_URL,
-        inLanguage: ['en', 'pt'],
-        publisher: { '@id': person['@id'] },
-      },
-      {
-        '@type': ['ProfilePage', 'WebPage'],
-        '@id': `${url}#page`,
-        name: copy[l].seoTitle,
-        description: copy[l].seoDescription,
-        url,
-        inLanguage: l,
-        isPartOf: { '@id': `${SITE_URL}/#website` },
-        mainEntity: { '@id': person['@id'] },
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${url}#faq`,
-        inLanguage: l,
-        mainEntity: getFaq(l).map(({ q, a }) => ({
-          '@type': 'Question',
-          name: q,
-          acceptedAnswer: { '@type': 'Answer', text: a },
-        })),
-      },
-    ],
-  };
+  return [
+    person,
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      name: 'João Pereira',
+      url: SITE_URL,
+      inLanguage: ['en', 'pt'],
+      publisher: { '@id': person['@id'] },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${url}#page`,
+      name: copy[l].seoTitle,
+      description: copy[l].seoDescription,
+      url,
+      inLanguage: l,
+      isPartOf: { '@id': `${SITE_URL}/#website` },
+      mainEntity: { '@id': person['@id'] },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      inLanguage: l,
+      mainEntity: getFaq(l).map(({ q, a }) => ({
+        '@type': 'Question',
+        name: q,
+        acceptedAnswer: { '@type': 'Answer', text: a },
+      })),
+    },
+  ].map(node => ({ '@context': 'https://schema.org', ...node }));
 }
 
 // The whole portfolio as Markdown: what agents read (en.md / pt.md and the AI view screen).
