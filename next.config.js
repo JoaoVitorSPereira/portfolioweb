@@ -1,5 +1,6 @@
 const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/portfolioweb' : '';
+// GitHub Pages serves under /portfolioweb; Vercel (VERCEL=1) serves from the root.
+const basePath = isProd && !process.env.VERCEL ? '/portfolioweb' : '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
