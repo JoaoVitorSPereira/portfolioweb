@@ -4,7 +4,7 @@
     "name": "João Pereira",
     "label": "Senior Mobile Developer",
     "email": "joaovitorspereira@gmail.com",
-    "url": "https://joaovitorspereira.github.io/portfolioweb/en",
+    "url": "https://joaopereiradev.vercel.app/en",
     "summary": "Over 6 years shipping production mobile apps for fintech, social and logistics platforms. I care about clean architecture, smooth UI and getting things through App Store review without losing my mind.",
     "profiles": [
       {
@@ -164,7 +164,7 @@
   "meta": {
     "language": "en",
     "yearsOfExperience": 6,
-    "cv": "https://joaovitorspereira.github.io/portfolioweb/cvfolder/JoaoPereira_CV.pdf",
+    "cv": "https://joaopereiradev.vercel.app/cvfolder/JoaoPereira_CV.pdf",
     "career": [
       {
         "year": 2026,

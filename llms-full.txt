@@ -110,4 +110,4 @@ What began with an interest in building things for the web eventually led me to 
 - Email: joaovitorspereira@gmail.com
 - GitHub: https://github.com/JoaoVitorSPereira
 - LinkedIn: https://www.linkedin.com/in/joaovitorspereira/
-- CV: https://joaovitorspereira.github.io/portfolioweb/cvfolder/JoaoPereira_CV.pdf
+- CV: https://joaopereiradev.vercel.app/cvfolder/JoaoPereira_CV.pdf

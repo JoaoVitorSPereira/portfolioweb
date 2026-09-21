@@ -1,19 +1,19 @@
 {
   "version": "1.0",
-  "generated": "2026-09-21T12:40:14.570Z",
+  "generated": "2026-09-21T12:44:53.003Z",
   "site": {
     "title": "João Pereira — Senior Mobile Developer",
     "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
-    "url": "https://joaovitorspereira.github.io/portfolioweb"
+    "url": "https://joaopereiradev.vercel.app"
   },
   "documents": [
     {
-      "url": "https://joaovitorspereira.github.io/portfolioweb/en",
+      "url": "https://joaopereiradev.vercel.app/en",
       "title": "João Pereira — Senior Mobile Developer",
       "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming."
     },
     {
-      "url": "https://joaovitorspereira.github.io/portfolioweb/pt",
+      "url": "https://joaopereiradev.vercel.app/pt",
       "title": "João Pereira — Desenvolvedor Mobile Sênior",
       "description": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming."
     }
