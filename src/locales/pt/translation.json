@@ -41,5 +41,28 @@
   "aboutText3": "Gosto de resolver problemas complexos de mobile, manter a arquitetura limpa e entregar software que realmente funciona em produção.",
   "builtTitle": "O que construí ao longo do caminho",
   "seoTitle": "João Pereira — Desenvolvedor Mobile Sênior",
-  "seoDescription": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming."
+  "seoDescription": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming.",
+  "faqTitle": "Perguntas frequentes.",
+  "faq": [
+    {
+      "q": "Quem é João Pereira?",
+      "a": "João Pereira é Desenvolvedor Mobile Sênior com mais de 6 anos de experiência criando aplicativos React Native e TypeScript em produção para fintech, redes sociais, logística e plataformas de live streaming."
+    },
+    {
+      "q": "Em que ele é especialista?",
+      "a": "Levar funcionalidades mobile da arquitetura à produção: projetar soluções sustentáveis, integrar APIs e SDKs nativos, lidar com requisitos de cada plataforma e publicar versões confiáveis na App Store e no Google Play."
+    },
+    {
+      "q": "Quantos aplicativos ele já publicou?",
+      "a": "Ele já publicou mais de 10 aplicativos em fintech, redes sociais, delivery e live streaming."
+    },
+    {
+      "q": "Ele está disponível para novos trabalhos?",
+      "a": "Sim. Está aberto a trabalhos freelance ou por contrato e a vagas em tempo integral. Fale com ele pela tela de Contato, pelo e-mail joaovitorspereira@gmail.com ou pela ferramenta book_intro do servidor MCP."
+    },
+    {
+      "q": "Um agente de IA consegue ler este portfólio?",
+      "a": "Sim. Ele expõe llms.txt, um arquivo JSON Resume, ferramentas WebMCP no navegador e um servidor MCP remoto com as ferramentas get_resume, get_projects, check_availability e book_intro."
+    }
+  ]
 }

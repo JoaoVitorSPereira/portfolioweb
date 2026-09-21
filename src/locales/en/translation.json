@@ -41,5 +41,28 @@
   "aboutText3": "I like solving complex mobile problems, keeping the architecture clean, and shipping software that actually works in production.",
   "builtTitle": "What I've Built Along the Way",
   "seoTitle": "João Pereira — Senior Mobile Developer",
-  "seoDescription": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming."
+  "seoDescription": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
+  "faqTitle": "Frequently asked questions.",
+  "faq": [
+    {
+      "q": "Who is João Pereira?",
+      "a": "João Pereira is a Senior Mobile Developer with over 6 years of experience building production React Native and TypeScript apps for fintech, social networking, logistics and live streaming platforms."
+    },
+    {
+      "q": "What does he specialize in?",
+      "a": "Taking mobile features from architecture to production: designing maintainable solutions, integrating APIs and native SDKs, handling platform-specific requirements and shipping reliable releases to the App Store and Google Play."
+    },
+    {
+      "q": "How many apps has he published?",
+      "a": "He has published 10+ apps across fintech, social networking, delivery and live streaming."
+    },
+    {
+      "q": "Is he available for new work?",
+      "a": "Yes. He is open to freelance or contract work and to full-time roles. Reach him through the Contact screen, by email at joaovitorspereira@gmail.com, or with the book_intro tool of the MCP server."
+    },
+    {
+      "q": "Can an AI agent read this portfolio?",
+      "a": "Yes. It exposes llms.txt, a JSON Resume file, WebMCP tools in the browser and a remote MCP server with the tools get_resume, get_projects, check_availability and book_intro."
+    }
+  ]
 }

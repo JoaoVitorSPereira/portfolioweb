@@ -97,18 +97,60 @@ export function getResume(language?: string) {
   };
 }
 
+export function getFaq(language?: string) {
+  return copy[lang(language)].faq;
+}
+
+// One @graph: the Person, the site, this page (a ProfilePage about the Person)
+// and the visible FAQ, so answer engines can quote it.
 export function getJsonLd(language?: string) {
   const l = lang(language);
-  return {
-    '@context': 'https://schema.org',
+  const url = `${SITE_URL}/${l}`;
+  const person = {
     '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
     name: 'João Pereira',
     jobTitle: headline(l),
     description: copy[l].welcomeText,
-    url: `${SITE_URL}/${l}`,
+    url,
     email: links.email,
+    image: `${SITE_URL}/og.png`,
     sameAs: [links.github, links.linkedin],
     knowsAbout: skillGroups.flatMap(g => g.tags),
+  };
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      person,
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        name: 'João Pereira',
+        url: SITE_URL,
+        inLanguage: ['en', 'pt'],
+        publisher: { '@id': person['@id'] },
+      },
+      {
+        '@type': ['ProfilePage', 'WebPage'],
+        '@id': `${url}#page`,
+        name: copy[l].seoTitle,
+        description: copy[l].seoDescription,
+        url,
+        inLanguage: l,
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+        mainEntity: { '@id': person['@id'] },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        inLanguage: l,
+        mainEntity: getFaq(l).map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+      },
+    ],
   };
 }
 

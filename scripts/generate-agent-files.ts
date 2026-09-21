@@ -3,7 +3,17 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { MCP_URL, SITE_URL, getResume, links, tools } from '../src/lib/agent';
+import { generateAEOFiles } from 'aeo.js';
+
+import {
+  MCP_URL,
+  SITE_URL,
+  getFaq,
+  getResume,
+  links,
+  tools,
+} from '../src/lib/agent';
+import { getSeo } from '../src/lib/seo';
 
 const out = join(process.cwd(), 'public');
 mkdirSync(out, { recursive: true });
@@ -122,4 +132,51 @@ write(
 `,
 );
 
-console.log('agent files written to public/');
+// aeo.js adds what is not hand-written above: robots.txt (AI crawlers allowed),
+// ai-index.json, schema.json, docs.json and a Markdown copy of each page
+// (en.md, pt.md). llms.txt, llms-full.txt and sitemap.xml stay curated, so
+// aeo.js does not overwrite them.
+function pageMarkdown(l: 'en' | 'pt'): string {
+  const r = getResume(l);
+  return `${r.basics.summary}
+
+## ${l === 'pt' ? 'Perguntas frequentes' : 'FAQ'}
+${getFaq(l)
+  .map(({ q, a }) => `### ${q}\n\n${a}`)
+  .join('\n\n')}
+
+## ${l === 'pt' ? 'Competências' : 'Skills'}
+${r.skills.map(sk => `- ${sk.name}: ${sk.keywords.join(', ')}`).join('\n')}
+
+## ${l === 'pt' ? 'Experiência' : 'Work'}
+${r.work.map(w => `### ${w.position}\n\n${w.summary}\n\nTechnologies: ${w.keywords.join(', ')}`).join('\n\n')}
+
+## ${l === 'pt' ? 'Contato' : 'Contact'}
+- Email: ${links.email}
+- GitHub: ${links.github}
+- LinkedIn: ${links.linkedin}
+`;
+}
+
+const { title, description } = getSeo('en');
+
+generateAEOFiles({
+  title,
+  description,
+  url: SITE_URL,
+  outDir: out,
+  pages: (['en', 'pt'] as const).map(l => ({
+    pathname: `/${l}`,
+    title: getSeo(l).title,
+    description: getSeo(l).description,
+    content: pageMarkdown(l),
+  })),
+  generators: { llmsTxt: false, llmsFullTxt: false, sitemap: false },
+  robots: { sitemap: `${SITE_URL}/sitemap.xml` },
+}).then(({ files, errors }) => {
+  if (errors.length) throw new Error(errors.join('\n'));
+  console.log(
+    'agent files written to public/',
+    files.map(f => f.replace(out + '/', '')).join(', '),
+  );
+});
