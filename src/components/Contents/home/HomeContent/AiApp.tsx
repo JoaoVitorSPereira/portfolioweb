@@ -13,26 +13,24 @@ import {
   Text,
 } from './styles';
 
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 // The "AI" app on the phone: the portfolio the way an AI agent reads it.
 export default function AiApp() {
   const l = isPt() ? 'pt' : 'en';
   const links = [
     {
-      href: `${prefix}/${l}.md`,
+      href: `/${l}.md`,
       title: `${l}.md`,
       label: 'Markdown',
       Icon: IoLogoMarkdown,
     },
     {
-      href: `${prefix}/llms.txt`,
+      href: `/llms.txt`,
       title: 'llms.txt',
       label: 'LLM index',
       Icon: IoDocumentText,
     },
     {
-      href: `${prefix}/${l === 'pt' ? 'resume.pt' : 'resume'}.json`,
+      href: `/${l === 'pt' ? 'resume.pt' : 'resume'}.json`,
       title: l === 'pt' ? 'resume.pt.json' : 'resume.json',
       label: 'JSON Resume',
       Icon: IoDocumentText,

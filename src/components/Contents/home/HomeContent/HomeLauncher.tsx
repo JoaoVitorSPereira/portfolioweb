@@ -29,8 +29,6 @@ import {
   SectionLabel,
 } from './styles';
 
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 interface Props {
   open: (screen: ScreenId) => void;
 }
@@ -64,7 +62,7 @@ export default function HomeLauncher({ open }: Props) {
 
       <Actions>
         <Action
-          href={`${prefix}/cvfolder/JoaoPereira_CV.pdf`}
+          href="/cvfolder/JoaoPereira_CV.pdf"
           target="_blank"
           rel="noreferrer"
         >

@@ -15,7 +15,7 @@ Live: <https://joaopereiradev.vercel.app>
 | Icons/Fonts | `react-icons` (Ionicons 5), local font *MADE Mirage* via `next/font/local`    |
 | Agents      | WebMCP (browser) + remote MCP server on a Cloudflare Worker                   |
 | Tooling     | `tsx` (build scripts), Prettier, EditorConfig                                 |
-| CI/Hosting  | GitHub Actions → GitHub Pages (`gh-pages` branch)                             |
+| Hosting     | Vercel (static export, auto-deploys on push to `main`)                        |
 
 ## Getting started
 
@@ -211,11 +211,11 @@ This portfolio is also a compact showcase of how I work as a **Senior Mobile Dev
 - **Mobile UX craft**: iOS-style app open/close transitions, launcher and navigation stack, safe-area handling, status bar, persistent navigation state.
 - **Code quality at scale**: strict typing, consistent naming, function-style rules, alias-only cross-module imports, one checked command (`tsc`) before "done".
 - **Team practices**: written standards (`CLAUDE.md`), Git workflow and commit conventions, review-before-merge discipline.
-- **Release lifecycle**: CI on every push/PR, automated build and deploy, base-path handling per environment.
-- **Security & resilience mindset**: defensive storage access, stateless endpoints, no secrets in the client, read-only tool annotations.
+- **Release lifecycle**: every push to `main` builds and deploys on Vercel; the MCP Worker ships separately with one command.
+- **Security & resilience mindset**: defensive storage access, stateless endpoints, no secrets in the client, per-tool read-only annotations.
 - **Cross-platform thinking**: one data source, multiple surfaces (web UI, WebMCP, MCP server, JSON Resume, `llms.txt`).
 - **Internationalization**: EN/PT routing, pre-rendered locales, alternate-language metadata.
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/definitive-build.yml`: `npm ci` → `npm run build` → deploy `out/` to the `gh-pages` branch. In production the site is served under the `/portfolioweb` base path (set in `next.config.js`); images are unoptimized because the export is static.
+Pushing to `main` triggers a Vercel build (`npm run build`, which first generates the agent files) and deploys the static `out/` export from the domain root. Images are unoptimized because the export is static. The Cloudflare Worker (MCP server) is deployed separately with `npm run worker:deploy`.
