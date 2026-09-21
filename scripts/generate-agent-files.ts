@@ -27,7 +27,7 @@ write(
 - [Resume, JSON Resume (PT)](${SITE_URL}/resume.pt.json)
 - [Full profile as text](${SITE_URL}/llms-full.txt): everything on the site in one file
 - [Agent guide](${SITE_URL}/agents.md): WebMCP tools and how to call them
-${MCP_URL ? `- [Remote MCP server](${MCP_URL}): tools get_resume and get_projects over JSON-RPC (streamable HTTP)\n` : ''}- [CV (PDF)](${links.cv})
+${MCP_URL ? `- [Remote MCP server](${MCP_URL}): tools ${tools.map(t => t.name).join(', ')} over JSON-RPC (streamable HTTP)\n` : ''}- [CV (PDF)](${links.cv})
 
 ## Pages
 - [Portfolio (EN)](${SITE_URL}/en)
@@ -85,9 +85,12 @@ This portfolio is readable by agents without scraping or screenshots.
 ## WebMCP (in the browser)
 Open ${SITE_URL}/en in a WebMCP-capable browser. These read-only tools are registered on \`document.modelContext\`:
 
-${tools.map(t => `- \`${t.name}\`: ${t.description}`).join('\n')}
+${tools
+  .filter(t => t.readOnly)
+  .map(t => `- \`${t.name}\`: ${t.description}`)
+  .join('\n')}
 
-Both accept \`{ "language": "en" | "pt" }\`.
+All accept \`{ "language": "en" | "pt" }\`.
 
 ${
   MCP_URL

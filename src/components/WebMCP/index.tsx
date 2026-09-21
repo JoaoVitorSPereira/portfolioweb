@@ -36,22 +36,24 @@ export default function WebMCP() {
     const ctrl = new AbortController();
     const registered: Registration[] = [];
 
-    tools.forEach(({ run, ...tool }) => {
-      try {
-        Promise.resolve(
-          mc.registerTool(
-            {
-              ...tool,
-              annotations: { readOnlyHint: true },
-              execute: async input => run(input),
-            },
-            { signal: ctrl.signal },
-          ),
-        )
-          .then(r => r && registered.push(r))
-          .catch(() => {});
-      } catch {}
-    });
+    tools
+      .filter(t => t.readOnly)
+      .forEach(({ run, readOnly, ...tool }) => {
+        try {
+          Promise.resolve(
+            mc.registerTool(
+              {
+                ...tool,
+                annotations: { readOnlyHint: true },
+                execute: async input => run(input),
+              },
+              { signal: ctrl.signal },
+            ),
+          )
+            .then(r => r && registered.push(r))
+            .catch(() => {});
+        } catch {}
+      });
 
     return () => {
       ctrl.abort();
