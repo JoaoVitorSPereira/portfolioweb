@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import i18next from 'i18next';
 import { IoBatteryFull, IoCellular, IoWifi } from 'react-icons/io5';
 
+import { useDragScroll } from '@/hooks/useDragScroll';
 import { AppOpenContext } from './context';
 import {
   AppGrid,
@@ -46,6 +47,7 @@ export default function Phone({ apps }: Props) {
   const [origin, setOrigin] = useState('50% 20%');
   const screenRef = useRef<HTMLDivElement>(null);
   const iconRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  useDragScroll(screenRef);
 
   useEffect(() => {
     let seen = false;
