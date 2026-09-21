@@ -13,7 +13,7 @@
   "skillsDescription": "Six years of experience with React Native and TypeScript, building and shipping production applications across fintech, social networking, logistics, and live streaming. Experienced in owning features end to end, from architecture and implementation to production releases on the App Store and Google Play.",
   "skillsExperience": "Experience with",
   "aboutTitle": "About me.",
-  "homeHint": "Tap Portfolio to open",
+  "homeHint": "Tap an app to open",
   "hello": "Hello, João",
   "expLabel": "Experience",
   "expValue": "6+ years",
@@ -64,5 +64,7 @@
       "q": "Can an AI agent read this portfolio?",
       "a": "Yes. It exposes llms.txt, a JSON Resume file, WebMCP tools in the browser and a remote MCP server with the tools get_resume, get_projects, check_availability and book_intro."
     }
-  ]
+  ],
+  "aiTitle": "AI view",
+  "aiIntro": "This is what AI agents read: the same portfolio as plain Markdown, plus machine-readable endpoints."
 }

@@ -72,6 +72,7 @@ npm run build        # static site in ./out
 
 - `scripts/generate-agent-files.ts` writes the generated files before `dev` and `build`. `llms.txt`, `llms-full.txt` and `sitemap.xml` are hand-written there; [aeo.js](https://aeojs.org) adds `robots.txt` (AI crawlers allowed), `ai-index.json`, `schema.json`, `docs.json` and Markdown copies of each page.
 - `/` renders the same crawlable page as `/en` (canonical points to `/en`) and then redirects to the visitor's language, so crawlers that skip JS still get content.
+- The phone has a second app, **AI**, that shows the portfolio as the Markdown agents read plus links to `llms.txt`, the JSON Resume and the MCP server. `Phone` takes an `apps` list; each app has its own icon and window.
 - Check the deployed site with `npx aeo.js check <url>` or https://check.aeojs.org.
 - To enable the remote server: `npm run worker:deploy`, then set `MCP_URL` in `src/lib/agent.ts` so it is advertised in `llms.txt` / `agents.md`.
 

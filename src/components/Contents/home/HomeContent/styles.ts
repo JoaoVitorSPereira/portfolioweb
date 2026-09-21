@@ -90,6 +90,36 @@ export const Text = styled.p`
   color: rgba(255, 255, 255, 0.78);
 `;
 
+export const Markdown = styled.pre`
+  ${surface}
+  max-height: 46rem;
+  padding: 1.4rem 1.5rem;
+  overflow: auto;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 1.15rem;
+  line-height: 1.8rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: rgba(255, 255, 255, 0.78);
+
+  /* Slim accent scrollbar, inset from the rounded corners. */
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    margin: 1.2rem 0;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: ${({ theme }) => theme.colors.accent};
+  }
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) => theme.colors.accent} transparent;
+  }
+`;
+
 /* ---------- home ---------- */
 
 export const Hero = styled.div`

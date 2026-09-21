@@ -1,11 +1,12 @@
 import { useRouter } from 'next/router';
 import i18next from 'i18next';
-import { IoChevronBack } from 'react-icons/io5';
+import { IoChevronBack, IoSparkles } from 'react-icons/io5';
 
 import Phone from '@/components/Phone';
 import { useScreenStack } from '@/hooks/useScreenStack';
 import { isPt } from '@/lib/lang';
 import About from './About';
+import AiApp from './AiApp';
 import Contact from './Contact';
 import HomeLauncher from './HomeLauncher';
 import { menu, type ScreenId } from './menu';
@@ -45,47 +46,66 @@ export default function HomeContent() {
   const { current, go } = useScreenStack(screenIds, 'home-screen');
   const router = useRouter();
 
-  return (
-    <Phone>
-      <Root>
-        <PageTitle>{i18next.t('seoTitle')}</PageTitle>
-        <HomeLayer $pushed={current !== null} inert={current !== null}>
-          <Bar>
-            <Avatar>JP</Avatar>
-            <Greeting>
-              <strong>{i18next.t('hello')}</strong>
-            </Greeting>
-            <LangSwitch>
-              <LangButton $active={!isPt()} onClick={() => router.push('/en')}>
-                EN
-              </LangButton>
-              <LangButton $active={isPt()} onClick={() => router.push('/pt')}>
-                PT
-              </LangButton>
-            </LangSwitch>
-          </Bar>
-          <HomeBody>
-            <HomeLauncher open={go} />
-          </HomeBody>
-        </HomeLayer>
+  const portfolio = (
+    <Root>
+      <PageTitle>{i18next.t('seoTitle')}</PageTitle>
+      <HomeLayer $pushed={current !== null} inert={current !== null}>
+        <Bar>
+          <Avatar>JP</Avatar>
+          <Greeting>
+            <strong>{i18next.t('hello')}</strong>
+          </Greeting>
+          <LangSwitch>
+            <LangButton $active={!isPt()} onClick={() => router.push('/en')}>
+              EN
+            </LangButton>
+            <LangButton $active={isPt()} onClick={() => router.push('/pt')}>
+              PT
+            </LangButton>
+          </LangSwitch>
+        </Bar>
+        <HomeBody>
+          <HomeLauncher open={go} />
+        </HomeBody>
+      </HomeLayer>
 
-        {menu.map(({ id, key }) => {
-          const Screen = screens[id];
-          return (
-            <ScreenLayer key={id} $open={current === id} inert={current !== id}>
-              <ScreenBar>
-                <BackButton aria-label="Back" onClick={() => go(null)}>
-                  <IoChevronBack size="2.2rem" />
-                </BackButton>
-                <h2>{i18next.t(key)}</h2>
-              </ScreenBar>
-              <ScreenBody>
-                <Screen />
-              </ScreenBody>
-            </ScreenLayer>
-          );
-        })}
-      </Root>
-    </Phone>
+      {menu.map(({ id, key }) => {
+        const Screen = screens[id];
+        return (
+          <ScreenLayer key={id} $open={current === id} inert={current !== id}>
+            <ScreenBar>
+              <BackButton aria-label="Back" onClick={() => go(null)}>
+                <IoChevronBack size="2.2rem" />
+              </BackButton>
+              <h2>{i18next.t(key)}</h2>
+            </ScreenBar>
+            <ScreenBody>
+              <Screen />
+            </ScreenBody>
+          </ScreenLayer>
+        );
+      })}
+    </Root>
+  );
+
+  return (
+    <Phone
+      apps={[
+        {
+          id: 'portfolio',
+          label: 'Portfolio',
+          tile: 'JP',
+          children: portfolio,
+        },
+        {
+          id: 'ai',
+          label: 'AI',
+          tile: <IoSparkles size="3.2rem" />,
+          background:
+            'linear-gradient(145deg, #7c5cff 0%, #3b82f6 55%, #0a1a40 100%)',
+          children: <AiApp />,
+        },
+      ]}
+    />
   );
 }

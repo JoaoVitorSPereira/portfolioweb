@@ -4,6 +4,7 @@ import { IoBatteryFull, IoCellular, IoWifi } from 'react-icons/io5';
 
 import { AppOpenContext } from './context';
 import {
+  AppGrid,
   AppIcon,
   AppWindow,
   Boot,
@@ -23,23 +24,38 @@ import {
 
 const BOOT_MS = 2400;
 
-interface Props {
+export interface PhoneApp {
+  id: string;
+  label: string;
+  // What the icon tile shows (initials or an icon) and, optionally, its background.
+  tile: React.ReactNode;
+  background?: string;
   children: React.ReactNode;
 }
 
-export default function Phone({ children }: Props) {
+interface Props {
+  apps: PhoneApp[];
+}
+
+// A phone home screen with one icon per app. Every app stays in the DOM,
+// hidden while closed, so the content is still crawlable.
+export default function Phone({ apps }: Props) {
   const [booted, setBooted] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<string | null>(null);
   const [time, setTime] = useState('');
   const [origin, setOrigin] = useState('50% 20%');
   const screenRef = useRef<HTMLDivElement>(null);
-  const iconRef = useRef<HTMLButtonElement>(null);
+  const iconRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   useEffect(() => {
     let seen = false;
     try {
       seen = !!sessionStorage.getItem('booted');
-      if (sessionStorage.getItem('phone-open')) setOpen(true);
+      const saved = sessionStorage.getItem('phone-open');
+      // '1' is the old flag from when the phone had a single app.
+      const id =
+        apps.find(a => a.id === saved)?.id ?? (saved ? apps[0].id : null);
+      if (id) setOpen(id);
     } catch {}
     if (seen) return setBooted(true);
 
@@ -60,7 +76,7 @@ export default function Phone({ children }: Props) {
     tick();
     const id = setInterval(tick, 20000);
     const onKey = (e: KeyboardEvent) =>
-      e.key === 'Escape' && setOpenSaved(false);
+      e.key === 'Escape' && setOpenSaved(null);
     window.addEventListener('keydown', onKey);
     return () => {
       clearInterval(id);
@@ -68,24 +84,24 @@ export default function Phone({ children }: Props) {
     };
   }, []);
 
-  const setOpenSaved = (value: boolean) => {
-    setOpen(value);
+  const setOpenSaved = (id: string | null) => {
+    setOpen(id);
     try {
-      if (value) sessionStorage.setItem('phone-open', '1');
+      if (id) sessionStorage.setItem('phone-open', id);
       else sessionStorage.removeItem('phone-open');
     } catch {}
   };
 
   // The app zooms out of (and back into) the icon, like iOS.
-  const openApp = () => {
+  const openApp = (id: string) => {
     const s = screenRef.current?.getBoundingClientRect();
-    const i = iconRef.current?.getBoundingClientRect();
+    const i = iconRefs.current[id]?.getBoundingClientRect();
     if (s && i) {
       setOrigin(
         `${i.left + i.width / 2 - s.left}px ${i.top + i.height / 2 - s.top}px`,
       );
     }
-    setOpenSaved(true);
+    setOpenSaved(id);
   };
 
   return (
@@ -102,27 +118,44 @@ export default function Phone({ children }: Props) {
             </StatusIcons>
           </StatusBar>
 
-          <HomeScreen $open={open} $ready={booted} inert={open}>
-            <AppIcon ref={iconRef} onClick={openApp}>
-              <IconTile>JP</IconTile>
-              Portfolio
-            </AppIcon>
+          <HomeScreen
+            $open={open !== null}
+            $ready={booted}
+            inert={open !== null}
+          >
+            <AppGrid>
+              {apps.map(app => (
+                <AppIcon
+                  key={app.id}
+                  ref={el => {
+                    iconRefs.current[app.id] = el;
+                  }}
+                  onClick={() => openApp(app.id)}
+                >
+                  <IconTile $background={app.background}>{app.tile}</IconTile>
+                  {app.label}
+                </AppIcon>
+              ))}
+            </AppGrid>
             <Hint>{i18next.t('homeHint')}</Hint>
           </HomeScreen>
 
-          <AppWindow
-            $open={open}
-            inert={!open}
-            style={{ transformOrigin: origin }}
-          >
-            <AppOpenContext.Provider value={open}>
-              {children}
-            </AppOpenContext.Provider>
-          </AppWindow>
+          {apps.map(app => (
+            <AppWindow
+              key={app.id}
+              $open={open === app.id}
+              inert={open !== app.id}
+              style={{ transformOrigin: origin }}
+            >
+              <AppOpenContext.Provider value={open === app.id}>
+                {app.children}
+              </AppOpenContext.Provider>
+            </AppWindow>
+          ))}
 
           <HomeIndicator
             aria-label="Home"
-            onClick={() => setOpenSaved(false)}
+            onClick={() => setOpenSaved(null)}
             tabIndex={open ? 0 : -1}
           />
 

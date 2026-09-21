@@ -154,6 +154,30 @@ export function getJsonLd(language?: string) {
   };
 }
 
+// The whole portfolio as Markdown: what agents read (en.md / pt.md and the AI view screen).
+export function getPageMarkdown(language?: string): string {
+  const l = lang(language);
+  const r = getResume(l);
+  return `${r.basics.summary}
+
+## ${l === 'pt' ? 'Perguntas frequentes' : 'FAQ'}
+${getFaq(l)
+  .map(({ q, a }) => `### ${q}\n\n${a}`)
+  .join('\n\n')}
+
+## ${l === 'pt' ? 'Competências' : 'Skills'}
+${r.skills.map(sk => `- ${sk.name}: ${sk.keywords.join(', ')}`).join('\n')}
+
+## ${l === 'pt' ? 'Experiência' : 'Work'}
+${r.work.map(w => `### ${w.position}\n\n${w.summary}\n\nTechnologies: ${w.keywords.join(', ')}`).join('\n\n')}
+
+## ${l === 'pt' ? 'Contato' : 'Contact'}
+- Email: ${links.email}
+- GitHub: ${links.github}
+- LinkedIn: ${links.linkedin}
+`;
+}
+
 const languageInput = {
   type: 'object',
   properties: {

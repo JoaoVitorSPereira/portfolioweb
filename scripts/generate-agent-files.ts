@@ -8,7 +8,7 @@ import { generateAEOFiles } from 'aeo.js';
 import {
   MCP_URL,
   SITE_URL,
-  getFaq,
+  getPageMarkdown,
   getResume,
   links,
   tools,
@@ -136,28 +136,6 @@ write(
 // ai-index.json, schema.json, docs.json and a Markdown copy of each page
 // (en.md, pt.md). llms.txt, llms-full.txt and sitemap.xml stay curated, so
 // aeo.js does not overwrite them.
-function pageMarkdown(l: 'en' | 'pt'): string {
-  const r = getResume(l);
-  return `${r.basics.summary}
-
-## ${l === 'pt' ? 'Perguntas frequentes' : 'FAQ'}
-${getFaq(l)
-  .map(({ q, a }) => `### ${q}\n\n${a}`)
-  .join('\n\n')}
-
-## ${l === 'pt' ? 'Competências' : 'Skills'}
-${r.skills.map(sk => `- ${sk.name}: ${sk.keywords.join(', ')}`).join('\n')}
-
-## ${l === 'pt' ? 'Experiência' : 'Work'}
-${r.work.map(w => `### ${w.position}\n\n${w.summary}\n\nTechnologies: ${w.keywords.join(', ')}`).join('\n\n')}
-
-## ${l === 'pt' ? 'Contato' : 'Contact'}
-- Email: ${links.email}
-- GitHub: ${links.github}
-- LinkedIn: ${links.linkedin}
-`;
-}
-
 const { title, description } = getSeo('en');
 
 generateAEOFiles({
@@ -169,7 +147,7 @@ generateAEOFiles({
     pathname: `/${l}`,
     title: getSeo(l).title,
     description: getSeo(l).description,
-    content: pageMarkdown(l),
+    content: getPageMarkdown(l),
   })),
   generators: { llmsTxt: false, llmsFullTxt: false, sitemap: false },
   robots: { sitemap: `${SITE_URL}/sitemap.xml` },

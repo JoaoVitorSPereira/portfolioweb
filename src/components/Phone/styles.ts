@@ -192,7 +192,13 @@ export const AppIcon = styled.button`
   }
 `;
 
-export const IconTile = styled.span`
+export const AppGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem 1.6rem;
+`;
+
+export const IconTile = styled.span<{ $background?: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,13 +209,9 @@ export const IconTile = styled.span`
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: -0.05rem;
-  background: linear-gradient(
-    145deg,
-    #ff8a24 0%,
-    #ff8a24 30%,
-    #12306d 72%,
-    #0a1a40 100%
-  );
+  background: ${({ $background }) =>
+    $background ??
+    'linear-gradient(145deg, #ff8a24 0%, #ff8a24 30%, #12306d 72%, #0a1a40 100%)'};
   box-shadow:
     inset 0 1px 1px rgba(255, 255, 255, 0.55),
     inset 0 -2px 6px rgba(0, 0, 0, 0.15),

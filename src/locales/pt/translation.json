@@ -13,7 +13,7 @@
   "skillsDescription": "Seis anos de experiência com React Native e TypeScript, desenvolvendo e publicando aplicações em produção em fintech, redes sociais, logística e live streaming. Experiência em assumir funcionalidades de ponta a ponta, da arquitetura e implementação até os releases de produção na App Store e no Google Play.",
   "skillsExperience": "Experiência com",
   "aboutTitle": "Sobre mim.",
-  "homeHint": "Toque em Portfolio para abrir",
+  "homeHint": "Toque em um app para abrir",
   "hello": "Olá, João",
   "expLabel": "Experiência",
   "expValue": "6+ anos",
@@ -64,5 +64,7 @@
       "q": "Um agente de IA consegue ler este portfólio?",
       "a": "Sim. Ele expõe llms.txt, um arquivo JSON Resume, ferramentas WebMCP no navegador e um servidor MCP remoto com as ferramentas get_resume, get_projects, check_availability e book_intro."
     }
-  ]
+  ],
+  "aiTitle": "Visão IA",
+  "aiIntro": "É isto que os agentes de IA leem: o mesmo portfólio em Markdown puro, mais endpoints legíveis por máquina."
 }
