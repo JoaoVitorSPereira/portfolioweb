@@ -337,6 +337,9 @@ export const BootMark = styled.div`
   font-size: 7.2rem;
   font-weight: 900;
   letter-spacing: -0.2rem;
+  /* background-clip: text stops at the box edge; padding keeps the P's bowl from being cut */
+  line-height: 1.2;
+  padding: 0.4rem 0.8rem;
   background: #fff;
   -webkit-background-clip: text;
   background-clip: text;
