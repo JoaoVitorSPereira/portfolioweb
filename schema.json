@@ -1,0 +1,119 @@
+{
+  "site": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "João Pereira — Senior Mobile Developer",
+      "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming.",
+      "url": "https://joaovitorspereira.github.io/portfolioweb"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "João Pereira — Senior Mobile Developer",
+      "url": "https://joaovitorspereira.github.io/portfolioweb"
+    }
+  ],
+  "pages": {
+    "/en": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is João Pereira?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "João Pereira is a Senior Mobile Developer with over 6 years of experience building production React Native and TypeScript apps for fintech, social networking, logistics and live streaming platforms."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does he specialize in?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Taking mobile features from architecture to production: designing maintainable solutions, integrating APIs and native SDKs, handling platform-specific requirements and shipping reliable releases to the App Store and Google Play."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many apps has he published?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "He has published 10+ apps across fintech, social networking, delivery and live streaming."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is he available for new work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. He is open to freelance or contract work and to full-time roles. Reach him through the Contact screen, by email at joaovitorspereira@gmail.com, or with the book_intro tool of the MCP server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can an AI agent read this portfolio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. It exposes llms.txt, a JSON Resume file, WebMCP tools in the browser and a remote MCP server with the tools get_resume, get_projects, check_availability and book_intro."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "João Pereira — Senior Mobile Developer",
+        "url": "https://joaovitorspereira.github.io/portfolioweb/en",
+        "description": "Portfolio of João Pereira, a senior mobile developer with 6+ years shipping production mobile apps across fintech, social networking, logistics and live streaming."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://joaovitorspereira.github.io/portfolioweb/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "En",
+            "item": "https://joaovitorspereira.github.io/portfolioweb/en"
+          }
+        ]
+      }
+    ],
+    "/pt": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "João Pereira — Desenvolvedor Mobile Sênior",
+        "url": "https://joaovitorspereira.github.io/portfolioweb/pt",
+        "description": "Portfólio de João Pereira, desenvolvedor mobile sênior com mais de 6 anos entregando apps mobile em produção em fintech, redes sociais, logística e live streaming."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://joaovitorspereira.github.io/portfolioweb/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pt",
+            "item": "https://joaovitorspereira.github.io/portfolioweb/pt"
+          }
+        ]
+      }
+    ]
+  }
+}

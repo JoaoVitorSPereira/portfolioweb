@@ -7,6 +7,7 @@
 - [Resume, JSON Resume (PT)](https://joaovitorspereira.github.io/portfolioweb/resume.pt.json)
 - [Full profile as text](https://joaovitorspereira.github.io/portfolioweb/llms-full.txt): everything on the site in one file
 - [Agent guide](https://joaovitorspereira.github.io/portfolioweb/agents.md): WebMCP tools and how to call them
+- [Remote MCP server](https://portfolio-mcp.joaovitorspereira.workers.dev/mcp): tools get_resume, get_projects, check_availability, book_intro over JSON-RPC (streamable HTTP)
 - [CV (PDF)](https://joaovitorspereira.github.io/portfolioweb/cvfolder/JoaoPereira_CV.pdf)
 
 ## Pages
